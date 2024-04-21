@@ -5,3 +5,9 @@
 main {
 	@apply bg-neutral-100;
 }
+*::-webkit-scrollbar {
+	display: none;
+}
+a {
+	@apply hover:underline hover:opacity-100 opacity-75;
+}
