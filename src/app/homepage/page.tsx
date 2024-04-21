@@ -1,6 +1,7 @@
 import React from 'react'
 import "./homepage.css";
 import { LOGO } from './LOGO';
+import Footer from '@/components/Footer';
 
 const index = () => {
     //TODO: Muss noch viel gemacht werden, das ist mir grad nur spontan eingefallen lol
@@ -44,6 +45,8 @@ const index = () => {
                     
                 </div>
             </div>
+            {/* <Footer /> */}
+            {/* TODO: Fix footer since its not aligned at the bottom of the page */}
         </main>
     )
 }
