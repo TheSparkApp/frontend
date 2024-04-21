@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Footer from "@/app/components/homepage/Footer";
 
 export const metadata: Metadata = {
 	title: "Spark",
