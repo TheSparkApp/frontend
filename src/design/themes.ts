@@ -15,10 +15,10 @@ export interface Theme {
 export const defaultTheme: Theme = {
     name: "default",
     colors: {
-        primary: "#1f2937",
-        secondary: "#d1d5db",
-        background: "#6b7280",
-        text: "#FFFFFF",
+        primary: "#1f2937", // Why Spark? background
+        secondary: "#d1d5db", // Navbar background
+        background: "#6b7280", // Page background
+        text: "#FFFFFF", // Text color
     },
     fonts: {
         body: "'Roboto', sans-serif",
