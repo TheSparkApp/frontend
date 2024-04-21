@@ -1,6 +1,5 @@
 import React from 'react'
 import "./homepage.css";
-import Image from 'next/image';
 import { LOGO } from './LOGO';
 
 const index = () => {

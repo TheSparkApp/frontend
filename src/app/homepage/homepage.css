@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 main {
-    @apply bg-neutral-100;
+	@apply bg-neutral-100;
 }
