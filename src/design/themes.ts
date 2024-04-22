@@ -66,7 +66,7 @@ export const darkTheme: Theme = {
         text: "#fff",
         text_secondary: "#fff",
         text_third: "#fff",
-        text_link: "#0095ff",
+        text_link: "#e8b923",
 
     },
     fonts: {

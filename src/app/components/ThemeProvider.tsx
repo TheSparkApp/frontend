@@ -15,10 +15,8 @@ const ThemeProviderComponent = ({ children }: { children: React.ReactNode }) => 
         let storedTheme;
         if (typeof localStorage !== 'undefined') {
             storedTheme = localStorage.getItem('theme');
-            console.log("[THEME] [STORED] ", storedTheme)
         }
-        const themeToUse = storedTheme ? JSON.parse(storedTheme) : lightTheme;
-        console.log('Using theme:', themeToUse);
+        const themeToUse = storedTheme ? themes.find(theme => theme.name === JSON.parse(storedTheme).name) || lightTheme : lightTheme;
         return themeToUse;
     });
 
@@ -26,16 +24,18 @@ const ThemeProviderComponent = ({ children }: { children: React.ReactNode }) => 
         const foundTheme = themes.find((theme) => theme.name === newTheme.name);
         if (foundTheme) {
             setTheme(foundTheme);
-            console.log(`Theme changing to ${foundTheme.name}`)
         } else {
-            console.log(`Theme changing to ${lightTheme.name} because of an unknown error!`)
             setTheme(lightTheme);
         }
-        // window.location.reload() // Reloading to apply all changes
     };
 
     useEffect(() => {
         if (typeof localStorage !== 'undefined') {
+            const storedTheme = localStorage.getItem('theme');
+            const currentTheme = themes.find(theme => theme.name === JSON.parse(storedTheme || "").name);
+            if (JSON.stringify(currentTheme) !== storedTheme) {
+                setTheme(currentTheme || defaultTheme);
+            }
             localStorage.setItem('theme', JSON.stringify(theme));
         }
     }, [theme]);
