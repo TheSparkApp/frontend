@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { ThemeProviderComponent } from "./components/ThemeProvider";
 
 export const metadata: Metadata = {
 	title: "Spark",
@@ -21,7 +22,11 @@ export default function RootLayout({
 			<head>
 				<link rel="icon" href="./favicon.ico" sizes="any" />
 			</head>
-			<body>{children}</body>
+			<body>
+				<ThemeProviderComponent>   
+					{children}
+				</ThemeProviderComponent>
+			</body>
 		</html>
 	);
 }

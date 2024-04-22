@@ -1,5 +1,5 @@
 "use client";
-import { Theme, lightTheme, themes } from "@/design/themes";
+import { Theme, lightTheme, darkTheme, duskBlueTheme, defaultTheme, themes } from "@/design/themes";
 import React, { createContext, useEffect } from "react";
 import { ThemeProvider } from "styled-components";
 
@@ -15,6 +15,7 @@ const ThemeProviderComponent = ({ children }: { children: React.ReactNode }) => 
         let storedTheme;
         if (typeof localStorage !== 'undefined') {
             storedTheme = localStorage.getItem('theme');
+            console.log("[THEME] [STORED] ", storedTheme)
         }
         const themeToUse = storedTheme ? JSON.parse(storedTheme) : lightTheme;
         console.log('Using theme:', themeToUse);
@@ -25,9 +26,12 @@ const ThemeProviderComponent = ({ children }: { children: React.ReactNode }) => 
         const foundTheme = themes.find((theme) => theme.name === newTheme.name);
         if (foundTheme) {
             setTheme(foundTheme);
+            console.log(`Theme changing to ${foundTheme.name}`)
         } else {
+            console.log(`Theme changing to ${lightTheme.name} because of an unknown error!`)
             setTheme(lightTheme);
         }
+        // window.location.reload() // Reloading to apply all changes
     };
 
     useEffect(() => {
@@ -38,7 +42,9 @@ const ThemeProviderComponent = ({ children }: { children: React.ReactNode }) => 
 
     return (
         <ThemeContext.Provider value={{ theme, switchTheme }}>
-            <ThemeProvider theme={theme}>{children}</ThemeProvider>
+            <ThemeProvider theme={theme}>
+                {children}
+            </ThemeProvider>
         </ThemeContext.Provider>
     );
 };
