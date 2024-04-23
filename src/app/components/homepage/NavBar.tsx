@@ -15,7 +15,7 @@ export const NavBar = () => {
 				<div className="w-full min-w-0 pl-5 pr-5 h-full m-1 flex-row flex overflow-x-hidden justify-start">
 					<div style={{color: theme?.theme.colors.text}} className="flex flex-row justify-center select-none hideon-phone hover:opacity-80 items-center cursor-pointer ml-3 p-2 hover:translate-x-1 hover:-translate-y-1 text-nowrap rounded-md transition-all ease-in duration-75">
 						<span className="font-semibold text-base">
-							What's SPARK
+							What&apos;s SPARK
 						</span>
 					</div>
 					<div style={{color: theme?.theme.colors.text}} className="flex flex-row justify-center select-none hideon-phone hover:opacity-80 items-center cursor-pointer ml-3 p-2 hover:translate-x-1 hover:-translate-y-1 text-nowrap rounded-md transition-all ease-in duration-75">

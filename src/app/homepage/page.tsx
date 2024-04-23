@@ -58,9 +58,9 @@ function Index() {
 						</div>
 						<div className="flex w-fit flex-col">
 							<div className="max-w-[800px] rounded-md flex flex-row flex-wrap justify-center items-start gap-4 select-none">
-								<Card title="What's SPARK?" content="Spark is Spark is Spark" />
-								<Card title="What's SPARK?" content="Spark is Spark is Spark" />
-								<Card title="What's SPARK?" content="Spark is Spark is Spark" />
+								<Card title="What&apos;s SPARK?" content="Spark is Spark is Spark" />
+								<Card title="What&apos;s SPARK?" content="Spark is Spark is Spark" />
+								<Card title="What&apos;s SPARK?" content="Spark is Spark is Spark" />
 							</div>
 							<div className="mt-5 h-fit flex flex-col justify-center items-center">
 								<div style={{ background: theme?.theme.colors.primary, borderColor: theme?.theme.colors.accent }} className="border select-none hover:opacity-100 w-52 min-h-[55px] p-2 rounded-md flex flex-row justify-center items-center cursor-pointer transition-all ease-in duration-75 hover:-translate-y-1 shadow-yellow-500 hover:shadow-lg">
