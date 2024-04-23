@@ -11,3 +11,22 @@ main {
 a {
 	@apply hover:underline hover:opacity-100 opacity-75;
 }
+.drag-none, .no-drag {
+	-webkit-user-drag: none;
+}
+.bg-yellow {
+	background-color: #FFB800;
+}
+@media (max-width: 600px) {
+    .hideon-phone {
+        display: none;
+    }
+	.hideon-phone {
+        display: none;
+    }
+}
+@media (min-width: 601px) and (max-width: 900px) {
+    .hideon-ipad {
+        display: none;
+    }
+}

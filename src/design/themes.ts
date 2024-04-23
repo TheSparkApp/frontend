@@ -9,6 +9,7 @@ export interface Theme {
         text: string;
         text_secondary: string;
         text_third : string;
+        text_negative : string;
         text_link : string;
     };
     fonts: {
@@ -29,6 +30,7 @@ export const defaultTheme: Theme = {
         text_secondary: "#fff",
         text_third: "#fff",
         text_link: "#0095ff",
+        text_negative: "#fff",
     },
     fonts: {
         body: "'system-ui', sans-serif",
@@ -40,14 +42,15 @@ export const lightTheme: Theme = {
     name: "light",
     colors: {
         logo_white: true,
-        primary: "#d1d5db",
+        primary: "#DBDFE4",
         accent: "#212121",
-        secondary: "#dc004e",
+        secondary: "#BABEC3",
         background: "#f1f1f1",
         text: "#000",
-        text_secondary: "#212121",
+        text_secondary: "#111",
         text_third: "#000",
         text_link: "#0095ff",
+        text_negative: "#fff",
 
     },
     fonts: {
@@ -67,6 +70,7 @@ export const darkTheme: Theme = {
         text_secondary: "#fff",
         text_third: "#fff",
         text_link: "#e8b923",
+        text_negative: "#fff",
 
     },
     fonts: {
@@ -87,6 +91,7 @@ export const duskBlueTheme: Theme = {
         text_secondary: "#fff",
         text_third: "#fff",
         text_link: "#0095ff",
+        text_negative: "#fff",
     },
     fonts: {
         body: "'system-ui', sans-serif",
