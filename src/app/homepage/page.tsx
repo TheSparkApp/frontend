@@ -90,7 +90,7 @@ function Index() {
 											</span>
 										</div>
 										<div className="flex flex-col text-sm mt-1 max-w-[300px]" style={{ color: theme?.theme.colors.text_secondary }}>
-											<span>Spark is designed for speed, offering fast and efficient data processing capabilities. With optimized algorithms and state-of-the-art technology, Spark handles large volumes of data quickly and effectively. This allows you to access and manipulate your data in real time, ensuring a smooth and responsive experience. Whether you're running complex computations or managing extensive datasets, Spark's performance-oriented architecture delivers quick results.</span>
+											<span>Spark is designed for speed, offering fast and efficient data processing capabilities. With optimized algorithms and state-of-the-art technology, Spark handles large volumes of data quickly and effectively. This allows you to access and manipulate your data in real time, ensuring a smooth and responsive experience. Whether you&apos;re running complex computations or managing extensive datasets, Spark&apos;s performance-oriented architecture delivers quick results.</span>
 										</div>
 									</div>
 									<div className="flex flex-col mt-5 mr-16 opacity-75 select-none">
@@ -123,7 +123,7 @@ function Index() {
 								<Image alt="" width={500} height={500} className="min-w-[300px] max-w-[300px] min-h-[300px] max-h-[300px] drag-none hideon-phone" src="/phone.png" />
 								<div className="ml-3 mr-5 flex flex-row items-center">
 									<span className="font-semibold text-3xl" style={{ color: theme?.theme.colors.text_secondary }}>
-										<p className="text-5xl font-bold italic">SPARK</p> connects you with others, helps you make new contacts and shows you what others are doing! Try it out, it's easy with our simple user interface!
+										<p className="text-5xl font-bold italic">SPARK</p> connects you with others, helps you make new contacts and shows you what others are doing! Try it out, it&apos;s easy with our simple user interface!
 									</span>
 								</div>
 							</motion.div>
