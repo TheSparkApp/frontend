@@ -16,7 +16,7 @@ const ThemeProviderComponent = ({ children }: { children: React.ReactNode }) => 
         if (typeof localStorage !== 'undefined') {
             storedTheme = localStorage.getItem('theme');
         }
-        const themeToUse = storedTheme ? themes.find(theme => theme.name === JSON.parse(storedTheme).name) || lightTheme : lightTheme;
+        const themeToUse = storedTheme ? themes.find(theme => theme.name === JSON.parse(storedTheme).name) || defaultTheme : defaultTheme;
         return themeToUse;
     });
 
@@ -25,7 +25,7 @@ const ThemeProviderComponent = ({ children }: { children: React.ReactNode }) => 
         if (foundTheme) {
             setTheme(foundTheme);
         } else {
-            setTheme(lightTheme);
+            setTheme(defaultTheme);
         }
     };
 
