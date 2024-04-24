@@ -12,7 +12,7 @@ const Footer = () => {
 				<a href="#">Privacy Policies</a>
 				<a href="#">Imprint</a>
 			</div>
-			<a style={{color: theme?.theme.colors.text}} href='mailto:spark-org@dxby.dev' className="text-lg font-semibold opacity-100">spark-org@dxby.dev</a>
+			<a style={{color: theme?.theme.colors.text}} href="mailto:spark-org@dxby.dev" className="text-lg font-semibold opacity-100">spark-org@dxby.dev</a>
 			</div>
 		</div>
 	);
