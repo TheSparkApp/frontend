@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { ThemeProviderComponent } from "./components/ThemeProvider";
+import { ThemeProviderComponent } from "../components/ThemeProvider";
 
 export const metadata: Metadata = {
 	title: "Spark",

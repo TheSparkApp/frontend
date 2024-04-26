@@ -1,16 +1,16 @@
 "use client";
 import React, { useEffect } from "react";
 import "./homepage.css";
-import { LOGO } from "./LOGO";
-import Footer from "@/app/components/homepage/Footer";
-import { NavBar } from "../components/homepage/NavBar";
+import { LOGO } from "../../components/LOGO";
+import Footer from "@/components/homepage/Footer";
+import { NavBar } from "../../components/homepage/NavBar";
 import { color, motion } from "framer-motion";
 import { FaBolt, FaLock } from "react-icons/fa"; // FREE TO USE
 import { FaUniversalAccess } from "react-icons/fa6"; // FREE TO USE
 import Image from "next/image";
 import { slideInFromLeft, slideInFromRight, slideInFromTop } from "@/util/motion";
 
-import { ThemeContext, ThemeProviderComponent } from "../components/ThemeProvider";
+import { ThemeContext } from "../../components/ThemeProvider";
 import { darkTheme, defaultTheme, duskBlueTheme, lightTheme, Theme } from "@/design/themes";
 
 function Index() {
