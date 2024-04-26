@@ -1,4 +1,4 @@
-import { LOGO } from "@/app/homepage/LOGO";
+import { LOGO } from "@/components/LOGO";
 import React from "react";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { ThemeContext } from "../ThemeProvider";
