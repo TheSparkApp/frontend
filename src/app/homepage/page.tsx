@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./homepage.css";
 import { LOGO } from "../../components/LOGO";
 import Footer from "@/components/homepage/Footer";
@@ -9,7 +9,6 @@ import { FaBolt, FaLock } from "react-icons/fa"; // FREE TO USE
 import { FaUniversalAccess } from "react-icons/fa6"; // FREE TO USE
 import Image from "next/image";
 import { slideInFromLeft, slideInFromRight, slideInFromTop } from "@/util/motion";
-
 import { ThemeContext } from "../../components/ThemeProvider";
 import { darkTheme, defaultTheme, duskBlueTheme, lightTheme, Theme } from "@/design/themes";
 
@@ -29,7 +28,7 @@ function Index() {
 				<br></br>
 
 				{/* DEBUG						 */}
-				<p className="text-xl text-center" style={{ color: theme?.theme.colors.text }}>
+				{/* <p className="text-xl text-center" style={{ color: theme?.theme.colors.text }}>
 					THEME: {theme?.theme.name}
 				</p>
 				<button onClick={() => switchT(darkTheme)} style={{ color: theme?.theme.colors.text }}>
@@ -43,7 +42,7 @@ function Index() {
 				</button>
 				<button onClick={() => switchT(duskBlueTheme)} style={{ color: theme?.theme.colors.text }}>
 					Change theme dusk
-				</button>
+				</button> */}
 				{/* 							 */}
 
 				<div className="w-full h-fit flex flex-col items-center overflow-y-scroll">
@@ -117,7 +116,7 @@ function Index() {
 							</motion.div>
 						</div>
 					</div>
-					<div style={{ background: theme?.theme.colors.primary }} className=" pb-5 pt-2 w-full mt-2 flex-col flex items-center">
+					<div id="whats-it" style={{ background: theme?.theme.colors.primary }} className=" pb-5 pt-2 w-full mt-2 flex-col flex items-center">
 						<motion.div variants={slideInFromLeft(0.5)} className="w-11/12 max-w-[1200px] h-full flex flex-row">
 							<Image alt="" width={500} height={500} className="min-w-[300px] max-w-[300px] min-h-[300px] max-h-[300px] drag-none hideon-phone" src="/phone.png" />
 							<div className="ml-3 mr-5 flex flex-row items-center">
@@ -206,6 +205,7 @@ const DevCard: React.FC<DevCardProps> = ({ name, description, path }) => {
 				<p style={{ color: theme?.theme.colors.text_secondary }} className="pl-1 pr-1 pt-1 pb-3 w-full h-full">
 					{description}
 				</p>
+				<br></br>
 			</div>
 		</div>
 	);

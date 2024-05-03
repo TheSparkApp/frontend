@@ -43,6 +43,7 @@ function Page() {
 			<div className="h-fit w-full">
 				<div className="w-full h-16 flex flex-row items-center justify-center pl-10 pr-10 gap-10">{children}</div>
 				<div className="w-full h-full flex flex-col items-center">
+					<a href="/dev" className="text-center text-4xl font-black mt-2 mb-5 text-blue-400 border-2 border-blue-500 border-solid cursor-pointer w-fit p-1 pl-2 pr-2 rounded-lg hover:bg-blue-900 transition-all">Return to DEV</a>
 					<h1 style={{ color: theme?.theme.colors.text }} className="text-4xl font-bold">
 						This is the text color!
 					</h1>
