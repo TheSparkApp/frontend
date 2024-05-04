@@ -39,9 +39,9 @@ function Index() {
 					</div>
 					<div className="flex w-fit flex-col">
 						<div className="max-w-[800px] rounded-md flex flex-row flex-wrap justify-center items-start gap-4 select-none">
-							<Card title="What's SPARK?" content="Spark is Spark is Spark" />
-							<Card title="What's SPARK?" content="Spark is Spark is Spark" />
-							<Card title="What's SPARK?" content="Spark is Spark is Spark" />
+							<Card title="Is SPARK secure?" content="Yes, because we work with encryption, not even we can see your private data." />
+							<Card title="What's SPARK?" content="Simple, user-friendly social media platform with the aim of bringing people together more " />
+							<Card title="Why SPARK?" content="It offers many opportunities to find more friends with the same interests. It's worth a try!" />
 						</div>
 						<div className="mt-5 h-fit flex flex-col justify-center items-center">
 							<div style={{ background: theme?.theme.colors.primary, borderColor: theme?.theme.colors.accent }} className="border select-none hover:opacity-100 w-52 min-h-[55px] p-2 rounded-md flex flex-row justify-center items-center cursor-pointer transition-all ease-in duration-75 hover:-translate-y-1 shadow-yellow-500 hover:shadow-lg">
@@ -115,7 +115,10 @@ function Index() {
 						</p>
 						<motion.div variants={slideInFromTop(0.2)} className="w-11/12 max-w-[1200px] h-full flex flex-row justify-center">
 							<div className="ml-3 mr-5 flex flex-row items-start justify-center mt-4 pt-2 flex-wrap">
-								<DevCard name="Stein" description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, vel." path="/stein_pfp.png" />
+								<DevCard name="Stein" description="15 years, a penchant for mojito - Fonti di Crodo" path="/stein_pfp.png" />
+								<div className="flex flex-row hideon-phone w-fit h-full justify-center items-center">
+									<div style={{ background: theme?.theme.colors.background }} className="h-14 w-0.5 rounded-full"></div>
+								</div>
 								<DevCard name="Rafa" description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, vel." path="/rafa_pfp.png" />
 							</div>
 						</motion.div>
@@ -162,7 +165,7 @@ const Card: React.FC<CardProps> = ({ title, content }) => {
 			<h1 style={{ color: theme?.theme.colors.text }} className="flex flex-row p-2 text-2xl font-bold">
 				{title}
 			</h1>
-			<span style={{ color: theme?.theme.colors.text }} className="text-center p-1 pt-0 font-semibold">
+			<span style={{ color: theme?.theme.colors.text }} className="text-center pl-2 pr-2 pt-0 font-semibold">
 				{content}
 			</span>
 		</div>
@@ -173,18 +176,18 @@ const DevCard: React.FC<DevCardProps> = ({ name, description, path }) => {
 	const theme = React.useContext(ThemeContext);
 	return (
 		<div
-			style={{ background: theme?.theme.colors.background, borderColor: theme?.theme.colors.accent }}
+			
 			className="
-		border group ml-6 mr-6 mt-1 mb-3 border-spacing-1.5 hover:opacity-100 rounded-md flex flex-col justify-center items-center 
-		cursor-pointer transition-all ease-in duration-150 w-72 h-fit hover:h-fit hover:z-10 hover:shadow-lg"
+		 group ml-6 mr-6 mt-1 mb-3 hover:opacity-100 rounded-md flex flex-col justify-center items-center 
+		cursor-pointer transition-all ease-in duration-150 w-72 h-fit hover:h-fit hover:z-10"
 		>
 			<div className="flex flex-row w-72 mt-4 mb-2 ml-10 items-center justify-start">
-				<Image alt="" width={50} height={50} className="min-h-[50px] min-w-[50px] max-h-[50px] max-w-[50px] rounded-full object-cover no-drag" src={path} />
-				<p className="text-3xl font-bold italic ml-5" style={{ color: theme?.theme.colors.text }}>
+				<Image alt="" width={50} height={50} className="min-h-[50px] min-w-[50px] max-h-[50px] max-w-[50px] rounded-full object-cover no-drag shadow-lg" src={path} />
+				<p className="text-3xl shadow-lg font-bold italic ml-5" style={{ color: theme?.theme.colors.text }}>
 					{name}
 				</p>
 			</div>
-			<div className="group-hover:h-20 group-hover:opacity-100 opacity-0 w-full h-0 pb-2 max-w-64 transition-all ease-in duration-150 overflow-hidden flex flex-col justify-center items-center">
+			<div className="group-hover:h-20 group-hover:opacity-100 opacity-0 w-full h-0 mt-2 pb-2 max-w-64 transition-all ease-in duration-150 flex flex-col justify-center items-center">
 				<p style={{ color: theme?.theme.colors.text_secondary }} className="pl-1 pr-1 pt-1 pb-3 w-full h-full">
 					{description}
 				</p>
