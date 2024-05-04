@@ -1,7 +1,7 @@
-"use client";
+import { redirect } from "next/navigation";
 import React from "react";
 
 export default function Page() {
-	window.location.href = "/home";
+	redirect("/home");
 	return <div>Redirecting...</div>;
 }

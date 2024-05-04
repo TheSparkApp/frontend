@@ -2,7 +2,7 @@
 import { NavBar } from "@/components/homepage/NavBar";
 import React from "react";
 import { ThemeContext } from "../../components/ThemeProvider";
-import "../homepage/homepage.css";
+import "../homepage.css";
 
 export default function Help() {
 	const theme = React.useContext(ThemeContext);

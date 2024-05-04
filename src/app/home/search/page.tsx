@@ -1,13 +1,26 @@
 "use client";
-import React from "react";
-import { useSearchParams } from "next/navigation";
+import React, { Suspense } from "react";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
+
+function Search() {
+	const router = useRouter();
+	const searchParams = useSearchParams();
+	const q = searchParams.get("q");
+	if (!q) {
+		router.prefetch("/home");
+		router.push("/home");
+	}
+	return (
+		<div>
+			<h1>Suchergebnisse für: {q}</h1>
+		</div>
+	);
+}
 
 export default function SearchPage() {
-	const searchParams = useSearchParams();
-    const q = searchParams.get("q");
-	if(!q) window.location.href = "/home";
-	return <div>
-		You are on subpage /search?q=... ! TODO: Implement API and backend & Search system
-		<h1>Suchergebnisse für: {q}</h1>
-		</div>;
+	return (
+		<Suspense fallback={<div>Loading...</div>}>
+			<Search />
+		</Suspense>
+	);
 }
