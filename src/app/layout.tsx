@@ -6,10 +6,8 @@ export const metadata: Metadata = {
 	title: "Spark",
 	description: "",
 	icons: {
-		icon: [
-			"/favicon.ico"
-		]
-	}
+		icon: ["/favicon.ico"],
+	},
 };
 
 export default function RootLayout({
@@ -23,9 +21,7 @@ export default function RootLayout({
 				<link rel="icon" href="./favicon.ico" sizes="any" />
 			</head>
 			<body>
-				<ThemeProviderComponent>   
-					{children}
-				</ThemeProviderComponent>
+				<ThemeProviderComponent>{children}</ThemeProviderComponent>
 			</body>
 		</html>
 	);

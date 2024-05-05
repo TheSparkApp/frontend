@@ -15,12 +15,12 @@ import { usePathname, useRouter } from "next/navigation";
 function Index() {
 	const theme = React.useContext(ThemeContext);
 	const [isTokenSet, setIsTokenSet] = useState(false);
-	
+
 	useEffect(() => {
-		if(localStorage.getItem("token")) {
+		if (localStorage.getItem("token")) {
 			setIsTokenSet(true);
-		}else setIsTokenSet(false);
-	}, [])
+		} else setIsTokenSet(false);
+	}, []);
 
 	const pathname = usePathname();
 	const router = useRouter();
@@ -184,7 +184,6 @@ const DevCard: React.FC<DevCardProps> = ({ name, description, path }) => {
 	const theme = React.useContext(ThemeContext);
 	return (
 		<div
-			
 			className="
 		 group ml-6 mr-6 mt-1 mb-3 hover:opacity-100 rounded-md flex flex-col justify-center items-center 
 		cursor-pointer transition-all ease-in duration-150 w-72 h-fit hover:h-fit hover:z-10"

@@ -38,4 +38,4 @@ export function slideInFromTop(delay: number) {
 			},
 		},
 	};
-};
+}
