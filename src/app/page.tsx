@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./util.css";
 import { LOGO } from "../components/LOGO";
 import Footer from "@/components/homepage/Footer";
@@ -14,12 +14,20 @@ import { usePathname, useRouter } from "next/navigation";
 
 function Index() {
 	const theme = React.useContext(ThemeContext);
+	const [isTokenSet, setIsTokenSet] = useState(false);
+	
 	const pathname = usePathname();
 	const router = useRouter();
 	if (pathname !== "/") {
 		router.push("/");
 		return;
 	}
+
+	useEffect(() => {
+		if(localStorage.getItem("token")) {
+			setIsTokenSet(true);
+		}else setIsTokenSet(false);
+	}, [])
 
 	return (
 		<motion.div initial="hidden" animate="visible" className="flex flex-col overflow-x-hidden overflow-y-scroll">
@@ -43,7 +51,7 @@ function Index() {
 							<Card title="What's SPARK?" content="Simple, user-friendly social media platform with the aim of bringing people closer together." />
 							<Card title="Why SPARK?" content="It offers many opportunities to find more friends with the same interests. It's worth a try!" />
 						</div>
-						<div className="mt-5 h-fit flex flex-col justify-center items-center">
+						<div className={`mt-5 h-fit flex flex-col justify-center items-center ${isTokenSet ? "hidden" : ""}`}>
 							<div style={{ background: theme?.theme.colors.primary, borderColor: theme?.theme.colors.accent }} className="border select-none hover:opacity-100 w-52 min-h-[55px] p-2 rounded-md flex flex-row justify-center items-center cursor-pointer transition-all ease-in duration-75 hover:-translate-y-1 shadow-yellow-500 hover:shadow-lg">
 								<span style={{ color: theme?.theme.colors.text_third }} className="text-2xl font-bold italic -translate-y-0.5">
 									Join Spark
