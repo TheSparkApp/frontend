@@ -33,7 +33,7 @@ export default function LoginPage() {
                     <div style={{ background: theme?.theme.colors.primary }} className="select-none rounded-lg shadow-lg min-h-[200px] h-fit pb-5 max-h-[700px] max-w-[800px] min-w-[480px] w-fit flex flex-row justify-start items-center">
                         <div className="w-full h-full flex flex-col justify-start items-center">
                             <h1 style={{ color: theme?.theme.colors.text }} className="text-white text-4xl font-bold italic mt-5">Create account</h1>
-                            <p style={{ color: theme?.theme.colors.text }} className="text-white opacity-75 text-base font-base italic mt-1">You'll be part of us in a moment!</p>
+                            <p style={{ color: theme?.theme.colors.text }} className="text-white opacity-75 text-base font-base italic mt-1">You&apos;ll be part of us in a moment!</p>
                             <form className="select-text w-11/12 max-w-[450px] mt-2">
                                 <div className="w-full h-fit group mb-2">
                                     <label htmlFor="username" className="block text-xs font-medium opacity-75 mb-1 ml-0.5" style={{ color: theme?.theme.colors.text }}>USERNAME *</label>

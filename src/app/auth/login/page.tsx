@@ -52,7 +52,7 @@ export default function LoginPage() {
                                     Log in
                                 </button>
                                 <div className="flex flex-row w-full justify-start items-center mt-2 select-none">
-                                    <span style={{ color: theme?.theme.colors.text }} className="opacity-75 italic text-sm">Don't have an account?</span>
+                                    <span style={{ color: theme?.theme.colors.text }} className="opacity-75 italic text-sm">Don&apos;t have an account?</span>
                                     <a className="ml-1 text-blue-500 opacity-100 text-sm" href="/auth/register">Create an account</a>
                                 </div>
                             </form>
