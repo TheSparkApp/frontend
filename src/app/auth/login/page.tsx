@@ -92,7 +92,9 @@ export default function LoginPage() {
 								className="text-white opacity-75 text-base font-base italic mt-1">
 								Welcome back!
 							</p>
-							<form className="select-text w-11/12 max-w-[450px] mt-2" onSubmit={handleSubmit}>
+							<form
+								className="select-text w-11/12 max-w-[450px] mt-2"
+								onSubmit={handleSubmit}>
 								<div className="w-full h-fit">
 									<label
 										htmlFor="username"
@@ -114,9 +116,9 @@ export default function LoginPage() {
 										name="username"
 										required
 										className="min-w-full w-full h-10 rounded-sm mt-1 p-1 pl-2 pr-4 outline-none border-none text-white focus:rounded-md ease-in transition-all duration-75"
-                                        value={username}
-                                        onChange={handleUsernameChange}
-                                    />
+										value={username}
+										onChange={handleUsernameChange}
+									/>
 									<label
 										htmlFor="username"
 										className="block text-xs -mt-0 font-bold italic opacity-75 text-red-500">
@@ -145,9 +147,9 @@ export default function LoginPage() {
 										name="password"
 										required
 										className="min-w-full w-full h-10 rounded-sm mt-1 p-1 pl-2 pr-4 outline-none border-none text-white focus:rounded-md ease-in transition-all duration-75"
-                                        value={password}
-                                        onChange={handlePasswordChange}
-                                    />
+										value={password}
+										onChange={handlePasswordChange}
+									/>
 								</div>
 								<button
 									id="login-btn"
@@ -179,7 +181,7 @@ export default function LoginPage() {
 								</div>
 							</form>
 						</div>
-						<div className="min-w-[120px] w-1/4 h-full ml-3 mr-6 flex flex-col justify-center hideon-phone hideon-ipad">
+						<div className="min-w-[120px] relative w-1/4 h-full ml-3 mr-6 flex flex-col justify-center items-center hideon-phone hideon-ipad">
 							<Image
 								className="rounded-lg mt-16"
 								alt="qr-code"

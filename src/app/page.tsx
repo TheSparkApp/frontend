@@ -190,7 +190,7 @@ const DevCard: React.FC<DevCardProps> = ({ name, description, path }) => {
 		>
 			<div className="flex flex-row w-72 mt-4 mb-2 ml-10 items-center justify-start">
 				<Image alt="" width={50} height={50} className="min-h-[50px] min-w-[50px] max-h-[50px] max-w-[50px] rounded-full object-cover no-drag shadow-lg" src={path} />
-				<p className="text-3xl shadow-lg font-bold italic ml-5" style={{ color: theme?.theme.colors.text }}>
+				<p className="text-3xl font-bold italic ml-5" style={{ color: theme?.theme.colors.text }}>
 					{name}
 				</p>
 			</div>
