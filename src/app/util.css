@@ -30,3 +30,12 @@ a {
         display: none;
     }
 }
+label {
+    user-select: none;
+}
+button {
+    user-select: none;
+}
+* {
+    outline: #FFB100;
+}

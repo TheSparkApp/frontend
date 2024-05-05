@@ -56,7 +56,7 @@ export const NavBar = () => {
 				</div>
 				<div style={{background: theme?.theme.colors.primary}} className="w-fit mr-10 relative h-full flex-row flex justify-end items-center">
 					<div className="absolute bg-yellow p-3 pt-1 ml-5 -translate-x-5 ease-in duration-75 transition-all hover:-translate-y-0.5 pb-1 cursor-pointer rounded-md">
-						<span style={{color: theme?.theme.colors.text}} className="font-bold italic text-xl text-nowrap">{isTokenSet ? "Open Spark": "Join"}</span>
+						<span onClick={() => window.location.href = isTokenSet ? "/home": "/auth/login"} style={{color: theme?.theme.colors.text}} className="font-bold italic text-xl text-nowrap">{isTokenSet ? "Open Spark": "Join"}</span>
 					</div>
 				</div>
 			</div>

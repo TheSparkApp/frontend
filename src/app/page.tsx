@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import "./homepage.css";
+import "./util.css";
 import { LOGO } from "../components/LOGO";
 import Footer from "@/components/homepage/Footer";
 import { NavBar } from "../components/homepage/NavBar";
@@ -40,7 +40,7 @@ function Index() {
 					<div className="flex w-fit flex-col">
 						<div className="max-w-[800px] rounded-md flex flex-row flex-wrap justify-center items-start gap-4 select-none">
 							<Card title="Is SPARK secure?" content="Yes, because we work with encryption, not even we can see your private data." />
-							<Card title="What's SPARK?" content="Simple, user-friendly social media platform with the aim of bringing people together more " />
+							<Card title="What's SPARK?" content="Simple, user-friendly social media platform with the aim of bringing people closer together." />
 							<Card title="Why SPARK?" content="It offers many opportunities to find more friends with the same interests. It's worth a try!" />
 						</div>
 						<div className="mt-5 h-fit flex flex-col justify-center items-center">
@@ -101,7 +101,7 @@ function Index() {
 					</div>
 					<div id="whats-it" style={{ background: theme?.theme.colors.primary }} className=" pb-5 pt-2 w-full mt-2 flex-col flex items-center">
 						<motion.div variants={slideInFromLeft(0.5)} className="w-11/12 max-w-[1200px] h-full flex flex-row">
-							<Image alt="" width={500} height={500} className="min-w-[300px] max-w-[300px] min-h-[300px] max-h-[300px] drag-none hideon-phone" src="/phone.png" />
+							<Image alt="" width={500} height={500} className="min-w-[300px] max-w-[300px] min-h-[300px] max-h-[300px] drag-none hideon-phone hideon-ipad" src="/phone.png" />
 							<div className="ml-3 mr-5 flex flex-row items-center">
 								<span className="font-semibold text-3xl" style={{ color: theme?.theme.colors.text_secondary }}>
 									<p className="text-5xl font-bold italic">SPARK</p> connects you with others, helps you make new contacts and shows you what others are doing! Try it out, it&apos;s easy with our simple user interface!
@@ -116,7 +116,7 @@ function Index() {
 						<motion.div variants={slideInFromTop(0.2)} className="w-11/12 max-w-[1200px] h-full flex flex-row justify-center">
 							<div className="ml-3 mr-5 flex flex-row items-start justify-center mt-4 pt-2 flex-wrap">
 								<DevCard name="Stein" description="15 years, a penchant for mojito - Fonti di Crodo" path="/stein_pfp.png" />
-								<div className="flex flex-row hideon-phone w-fit h-full justify-center items-center">
+								<div className="flex flex-row hideon-phone w-fit h-full justify-center items-center hideon-ipad">
 									<div style={{ background: theme?.theme.colors.background }} className="h-14 w-0.5 rounded-full"></div>
 								</div>
 								<DevCard name="Rafa" description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, vel." path="/rafa_pfp.png" />
