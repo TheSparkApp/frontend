@@ -1,7 +1,7 @@
 "use client";
 import { NavBar } from "@/components/homepage/NavBar";
 import React from "react";
-import "../homepage.css";
+import "../util.css";
 import { ThemeContext } from "../../components/ThemeProvider";
 
 export default function PrivacyPolicies() {
