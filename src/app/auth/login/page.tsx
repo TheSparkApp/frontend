@@ -3,7 +3,6 @@ import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { ThemeContext } from "@/components/ThemeProvider";
 import { FiEye, FiEyeOff } from "react-icons/fi";
-import { slideInFromLeft } from "@/util/motion";
 
 export default function AuthPage() {
 	const theme = React.useContext(ThemeContext);
