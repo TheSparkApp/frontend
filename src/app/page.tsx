@@ -16,18 +16,18 @@ function Index() {
 	const theme = React.useContext(ThemeContext);
 	const [isTokenSet, setIsTokenSet] = useState(false);
 	
+	useEffect(() => {
+		if(localStorage.getItem("token")) {
+			setIsTokenSet(true);
+		}else setIsTokenSet(false);
+	}, [])
+
 	const pathname = usePathname();
 	const router = useRouter();
 	if (pathname !== "/") {
 		router.push("/");
 		return;
 	}
-
-	useEffect(() => {
-		if(localStorage.getItem("token")) {
-			setIsTokenSet(true);
-		}else setIsTokenSet(false);
-	}, [])
 
 	return (
 		<motion.div initial="hidden" animate="visible" className="flex flex-col overflow-x-hidden overflow-y-scroll">
