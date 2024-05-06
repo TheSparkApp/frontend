@@ -8,7 +8,7 @@ import Footer from "@/components/homepage/Footer";
 import { LOGO } from "@/components/LOGO";
 import Image from "next/image";
 
-export default function twofactorPage() {
+export default function TwoFactorPage() {
 	const theme = React.useContext(ThemeContext);
 	const [code, setCode] = useState("");
 	const [codeError, setCodeError] = useState("");

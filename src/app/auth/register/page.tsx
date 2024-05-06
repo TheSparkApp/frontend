@@ -9,7 +9,7 @@ import { LOGO } from "@/components/LOGO";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
-export default function LoginPage() {
+export default function RegisterPage() {
 	const theme = React.useContext(ThemeContext);
 	const router = useRouter();
 
