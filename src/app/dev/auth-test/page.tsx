@@ -5,6 +5,7 @@ import { Base64 } from "js-base64";
 import generateToken, { validateToken } from "./tokenGen";
 import { LOGO } from "@/components/LOGO";
 import { ThemeContext } from "@/components/ThemeProvider";
+import { useRouter } from "next/navigation";
 
 function Page() {
 	const [id, setId] = useState<number | null>(null);
@@ -12,6 +13,7 @@ function Page() {
 	const [token, setToken] = useState("");
 	const [validationResult, setValidationResult] = useState(false);
 	const theme = React.useContext(ThemeContext);
+	const router = useRouter();
 
 	const handleGenerateToken = () => {
 		if (id !== null && password !== "") {
@@ -36,7 +38,7 @@ function Page() {
 				<LOGO width="320px" height="120px" white={!theme?.theme.colors.logo_white} />
 			</div>
 			<div className="h-fit w-full flex flex-col justify-center items-center">
-				<a href="/dev" className="text-center text-4xl font-black mt-2 text-blue-400 border-2 border-blue-500 border-solid cursor-pointer w-fit p-1 pl-2 pr-2 rounded-lg hover:bg-blue-900 transition-all">
+				<a onClick={() => router.push("/dev")} className="text-center text-4xl font-black mt-2 text-blue-400 border-2 border-blue-500 border-solid cursor-pointer w-fit p-1 pl-2 pr-2 rounded-lg hover:bg-blue-900 transition-all">
 					Return to DEV
 				</a>
 				<div className="w-full h-full flex flex-row items-start justify-center pl-10 pr-10 gap-10 mt-10 flex-wrap">

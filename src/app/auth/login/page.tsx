@@ -7,9 +7,11 @@ import "../../util.css";
 import Footer from "@/components/homepage/Footer";
 import { LOGO } from "@/components/LOGO";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function LoginPage() {
 	const theme = React.useContext(ThemeContext);
+	const router = useRouter();
 
 	//INPUTS
 	const [username, setUsername] = useState("");
@@ -170,12 +172,12 @@ export default function LoginPage() {
 										Don&apos;t have an account?
 									</span>
 									<a
-										className="ml-1 opacity-100 text-sm"
+										className="ml-1 opacity-100 text-sm cursor-pointer"
 										style={{
 											color: theme?.theme.colors
 												.text_link,
 										}}
-										href="/auth/register">
+										onClick={() => router.push("/auth/register")}>
 										Create an account
 									</a>
 								</div>

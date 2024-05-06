@@ -7,9 +7,12 @@ import "../../util.css";
 import Footer from "@/components/homepage/Footer";
 import { LOGO } from "@/components/LOGO";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function LoginPage() {
 	const theme = React.useContext(ThemeContext);
+	const router = useRouter();
+
 	//INPUTS
 	const [username, setUsername] = useState<string>("");
 	const [globalName, setGlobalName] = useState<string>("");
@@ -355,8 +358,8 @@ export default function LoginPage() {
 											I have read the{" "}
 										</label>
 										<a
-											href="/privacy-policy"
-											className="text-sm opacity-100 font-base ml-1"
+											onClick={() => router.push("/privacy-policy")}
+											className="text-sm opacity-100 font-base ml-1 cursor-pointer"
 											style={{
 												color: theme?.theme.colors
 													.text_link,
@@ -372,8 +375,8 @@ export default function LoginPage() {
 											and{" "}
 										</label>
 										<a
-											href="/terms-of-service"
-											className="text-sm opacity-100 font-base ml-1"
+											onClick={() => router.push("/privacy-policy")}
+											className="text-sm opacity-100 font-base ml-1 cursor-pointer"
 											style={{
 												color: theme?.theme.colors
 													.text_link,
@@ -409,12 +412,12 @@ export default function LoginPage() {
 										Already have an account?
 									</span>
 									<a
-										className="ml-1 opacity-100 text-sm"
+										className="ml-1 opacity-100 text-sm cursor-pointer"
 										style={{
 											color: theme?.theme.colors
 												.text_link,
 										}}
-										href="/auth/login">
+										onClick={() => router.push("/auth/login")}>
 										Log in
 									</a>
 								</div>
