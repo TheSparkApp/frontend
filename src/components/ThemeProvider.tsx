@@ -1,6 +1,7 @@
 "use client";
 import { Theme, lightTheme, darkTheme, duskBlueTheme, defaultTheme, themes } from "@/design/themes";
-import React, { createContext, useEffect } from "react";
+import { useRouter } from "next/navigation";
+import React, { createContext, useEffect, useState } from "react";
 import { ThemeProvider } from "styled-components";
 
 type ThemeContextType = {
@@ -12,6 +13,7 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 const ThemeProviderComponent = ({ children }: { children: React.ReactNode }) => {
 	let systemTheme: Theme;
+	const router = useRouter();
 
 	const [theme, setTheme] = React.useState(() => {
 		let storedTheme;

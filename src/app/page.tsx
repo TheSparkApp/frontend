@@ -28,6 +28,7 @@ function Index() {
 		router.push("/");
 		return;
 	}
+	
 
 	return (
 		<motion.div initial="hidden" animate="visible" className="flex flex-col overflow-x-hidden overflow-y-scroll">
@@ -52,7 +53,7 @@ function Index() {
 							<Card title="Why SPARK?" content="It offers many opportunities to find more friends with the same interests. It's worth a try!" />
 						</div>
 						<div className={`mt-5 h-fit flex flex-col justify-center items-center ${isTokenSet ? "hidden" : ""}`}>
-							<div style={{ background: theme?.theme.colors.primary, borderColor: theme?.theme.colors.accent }} className="border select-none hover:opacity-100 w-52 min-h-[55px] p-2 rounded-md flex flex-row justify-center items-center cursor-pointer transition-all ease-in duration-75 hover:-translate-y-1 shadow-yellow-500 hover:shadow-lg">
+							<div style={{ background: theme?.theme.colors.primary, borderColor: theme?.theme.colors.accent }} onClick={() => router.push( isTokenSet ? "/home" : "/auth/login")} className="border select-none hover:opacity-100 w-52 min-h-[55px] p-2 rounded-md flex flex-row justify-center items-center cursor-pointer transition-all ease-in duration-75 hover:-translate-y-1 shadow-yellow-500 hover:shadow-lg">
 								<span style={{ color: theme?.theme.colors.text_third }} className="text-2xl font-bold italic -translate-y-0.5">
 									Join Spark
 								</span>
@@ -121,7 +122,7 @@ function Index() {
 						<p className="text-5xl font-bold italic" style={{ color: theme?.theme.colors.text_secondary }}>
 							ABOUT US
 						</p>
-						<motion.div variants={slideInFromTop(0.2)} className="w-11/12 max-w-[1200px] h-full flex flex-row justify-center">
+						<motion.div id="authors" variants={slideInFromTop(0.2)} className="w-11/12 max-w-[1200px] h-full flex flex-row justify-center">
 							<div className="ml-3 mr-5 flex flex-row items-start justify-center mt-4 pt-2 flex-wrap">
 								<DevCard name="Stein" description="15 years, a penchant for mojito - Fonti di Crodo" path="/stein_pfp.png" />
 								<div className="flex flex-row hideon-phone w-fit h-full justify-center items-center hideon-ipad">
