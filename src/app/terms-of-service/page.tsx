@@ -121,13 +121,13 @@ export default function TOS() {
 
 					<h1 id="serviceAsIs" style={{ color: theme?.theme.colors.text }} className="font-black text-3xl mt-10">Services &apos;AS IS&apos;</h1>
 					<div className="mt-5 flex flex-col gap-2" style={{ color: theme?.theme.colors.text }}>
-						<span>SPARK provides its services "as is" without specific warranties. We disclaim any express or implied warranties, including warranties of merchantability, fitness for a particular purpose or non-infringement, to the extent permitted by law. We do everything we can to make it better. This means that we do not guarantee that our services will always work perfectly or meet your expectations. However, we always strive to provide a high quality user experience.</span>
+						<span>SPARK provides its services &quot;as is&quot; without specific warranties. We disclaim any express or implied warranties, including warranties of merchantability, fitness for a particular purpose or non-infringement, to the extent permitted by law. We do everything we can to make it better. This means that we do not guarantee that our services will always work perfectly or meet your expectations. However, we always strive to provide a high quality user experience.</span>
 					</div>
 
 					<h1 id="whatToExpect" style={{ color: theme?.theme.colors.text }} className="font-black text-3xl mt-10">What can you expect from us</h1>
 					<div className="mt-5 flex flex-col gap-2" style={{ color: theme?.theme.colors.text }}>
 						<span>SPARK is the best place to chat online, socialize and post your own stuff. We offer different groups for your own interests. Users have a feed, but also groups that are more interest-oriented. Users can also communicate directly with each other or exchange messages in groups.</span>
-						<span>Users create content on the feed or create and manage groups, choose which ones they join, and who their "friends" are. All users must adhere to our guidelines, but group owners set additional rules and permissions, including member requirements.</span>
+						<span>Users create content on the feed or create and manage groups, choose which ones they join, and who their &quot;friends&quot; are. All users must adhere to our guidelines, but group owners set additional rules and permissions, including member requirements.</span>
 						<span>SPARK is designed to bring the latest information to people and expand interests. Posts appear on the feed. We are developing features to facilitate the creation of content.</span>
 						<span>Our services are personalized to help you discover new interests that may be of interest to you. You can adjust the personalization in your settings.</span>
 						<span>We are continuously developing new features to improve SPARK. This may include adding or removing features and services if they no longer provide value or pose risks to SPARK or others. We try to avoid disruption, but we cannot guarantee that there will be no outages or changes that may affect your content. We are not liable for such outages or service changes.</span>
