@@ -102,7 +102,7 @@ export default function TOS() {
 					<h1 id="content" style={{ color: theme?.theme.colors.text }} className="font-black text-3xl mt-10">Your / Our and Other content</h1>
 					<div className="mt-5 flex flex-col gap-2" style={{ color: theme?.theme.colors.text }}>
 						<span className="font-bold">YOUR CONTENT</span>
-						<span>This is about YOUR content, i.e. what you share, upload, show, etc. This means everything you upload/post/share on this service, everything you can "add" to SPARK. First of all, you don't HAVE to share anything, it's all optional to add content to SPARK. If you add something, you are responsible for what you add. That means: You need the license if there is one, you need to respect copyright, you need to see if it violates our TOS / Law. We have NO RESPONSIBILITY over your content or the content of others, or others who use your content.</span>
+						<span>This is about YOUR content, i.e. what you share, upload, show, etc. This means everything you upload/post/share on this service, everything you can &quot;add&quot; to SPARK. First of all, you don&apos;t HAVE to share anything, it&apos;s all optional to add content to SPARK. If you add something, you are responsible for what you add. That means: You need the license if there is one, you need to respect copyright, you need to see if it violates our TOS / Law. We have NO RESPONSIBILITY over your content or the content of others, or others who use your content.</span>
 						<span>SPARK offers users groups, or even direct messages, and of course a MAIN feed with lots of content. Some groups are private, which means that you can only join with an invitation link. Groups have certain functions, which you must adhere to, as well as the rules of the group admins. Only join the groups you want to be a part of.</span>
 						<span>The content you post belongs to you, of course, but you grant us a license when you use SPARK, and your content may be copyrighted and we have no ownership rights in it. However, when you use our services, you grant us a license to use your content for the operation, development and improvement of our services in accordance with applicable laws. These services are:</span>
 						<span>- Use, store, copies</span>
@@ -114,7 +114,7 @@ export default function TOS() {
 						<span className="font-bold">OUR CONTENT</span>
 						<span>Our Services contain our own content, including app and website designs, graphics, images and text. You may use our software in accordance with these Terms. All intellectual property rights in our content remain with us.</span>
 						<span className="font-bold">OTHER CONTENT</span>
-						<span>Our services may provide you with access to other people's content. You may only use this content with that person's permission or as permitted by law. The content of others belongs to them and does not necessarily represent our views.</span>
+						<span>Our services may provide you with access to other people&apos;s content. You may only use this content with that person&apos;s permission or as permitted by law. The content of others belongs to them and does not necessarily represent our views.</span>
 						<span>We do not verify or endorse the accuracy of User Content and strive to provide a safe, positive environment. However, you may encounter objectionable content. We accept no liability for any harm caused by such content. You can report content that violates our policies. We have the right, but not the obligation, to review such reports and remove content at our discretion.</span>
 						<span>Our Services may also provide you with access to third-party content such as websites, features and applications. These access points are provided as a convenience to you and we are not liable for their content or services.</span>
 					</div>
@@ -135,7 +135,7 @@ export default function TOS() {
 
 					<h1 id="restrictions" style={{ color: theme?.theme.colors.text }} className="font-black text-3xl mt-10">Restrictions on your use of Spark&apos;s services</h1>
 					<div className="mt-5 flex flex-col gap-2" style={{ color: theme?.theme.colors.text }}>
-						<span>Compliance with Laws and Policies: You must comply with all applicable laws and our policies when using SPARK's services.</span>
+						<span>Compliance with Laws and Policies: You must comply with all applicable laws and our policies when using SPARK&apos;s services.</span>
 						<span>Prohibited Content: Do not post or share any illegal, offensive, or harmful content, including hate speech, harassment, or explicit material.</span>
 						<span>No Impersonation: Do not impersonate others or create misleading profiles.</span>
 						<span>No Unauthorized Access: Do not attempt to access accounts or data that do not belong to you.</span>
@@ -149,7 +149,7 @@ export default function TOS() {
 					<div className="mt-5 flex flex-col gap-2" style={{ color: theme?.theme.colors.text }}>
 						<span>SPARK is not liable for damages, losses, or injuries resulting from the use of our platform, to the extent permitted by law. This includes, but is not limited to, direct or indirect damages, consequential damages, lost profits, or data loss.</span>
 						<span>We are not responsible for the content, actions, or omissions of third parties on our platform, including other users or third-party providers. Use of third-party services or content is at your own risk.</span>
-						<span>Our platform is provided "as is" and "as available." We make no warranties or representations regarding the performance, safety, availability, or reliability of our services.</span>
+						<span>Our platform is provided &quot;as is&quot; and &quot;as available.&quot; We make no warranties or representations regarding the performance, safety, availability, or reliability of our services.</span>
 						<span>In cases where we may be held liable, our liability is limited to the maximum amount you paid for the use of our services in the last twelve months, or a lesser amount if required by applicable laws.</span>
 						<span>We recommend taking precautions and following our safety guidelines to protect your account and personal data.</span>
 					</div>
