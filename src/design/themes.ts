@@ -43,7 +43,7 @@ export const darkTheme: Theme = {
 		logo_white: false,
 		primary: "#232323",
 		accent: "#FFB800",
-		secondary: "#f48fb1",
+		secondary: "#343434",
 		background: "#121212",
 		text: "#fff",
 		text_secondary: "#fff",

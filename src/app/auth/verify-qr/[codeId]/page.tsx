@@ -4,22 +4,23 @@ import React from "react";
 
 type Params = {
 	params: {
-		groupId?: string;
+		codeId?: string;
 	};
 };
 
 export default function GroupPage({ params }: Params) {
-	const { groupId } = params;
+	const { codeId } = params;
+
 	const router = useRouter();
-	if (!groupId) {
-		if (!groupId || !/^\d+$/.test(groupId)) {
-			router.push("/home/groups");
+	if (!codeId) {
+		if (!codeId || !/^\d+$/.test(codeId)) {
+			router.push("/auth/login");
 		}
 	}
 
 	return (
 		<div>
-			<h1>Gruppe mit ID: {groupId} wird geladen</h1>
+			<h1>QR CODE mit code: {codeId} wird validiert</h1>
 		</div>
 	);
 }

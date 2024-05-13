@@ -152,15 +152,35 @@ export default function LoginPage() {
 										value={password}
 										onChange={handlePasswordChange}
 									/>
+									<div className="flex flex-row w-full justify-start items-center mt-2 select-none">
+										<span
+											style={{
+												color: theme?.theme.colors.text,
+											}}
+											className="opacity-75 italic text-sm">
+											Forgot your password?
+										</span>
+										<a
+											className="ml-1 opacity-100 text-sm cursor-pointer"
+											style={{
+												color: theme?.theme.colors
+													.text_link,
+											}}
+											onClick={() =>
+												router.push("/auth/reset-password")
+											}>
+											Reset your password
+										</a>
+									</div>
 								</div>
 								<button
 									id="login-btn"
 									style={{
-										background: theme?.theme.colors.accent,
+										background: theme?.theme.colors.secondary,
 										color: theme?.theme.colors.text,
 									}}
 									type="submit"
-									className="w-full h-10 font-semibold text-xl rounded-sm mt-8 transition-all ease-in hover:opacity-90 hover:rounded-md duration-[45ms]">
+									className="w-full h-10 font-semibold text-xl rounded-sm mt-5 transition-all ease-in hover:opacity-90 hover:rounded-md duration-[45ms]">
 									Log in
 								</button>
 								<div className="flex flex-row w-full justify-start items-center mt-2 select-none">
@@ -177,7 +197,9 @@ export default function LoginPage() {
 											color: theme?.theme.colors
 												.text_link,
 										}}
-										onClick={() => router.push("/auth/register")}>
+										onClick={() =>
+											router.push("/auth/register")
+										}>
 										Create an account
 									</a>
 								</div>

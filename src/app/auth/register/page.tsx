@@ -396,7 +396,7 @@ export default function RegisterPage() {
 								<button
 									id="register-btn"
 									style={{
-										background: theme?.theme.colors.accent,
+										background: theme?.theme.colors.secondary,
 										color: theme?.theme.colors.text,
 									}}
 									type="submit"

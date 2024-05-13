@@ -1,3 +1,5 @@
+"use client";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 type Params = {
@@ -9,8 +11,11 @@ type Params = {
 export default function PostPage({ params }: Params) {
 	const { postId } = params;
 
+	const router = useRouter();
 	if (!postId) {
-		return <div>Fehler: Keine Post-ID angegeben.</div>;
+		if (!postId || !/^\d+$/.test(postId)) {
+			router.push("/home/groups");
+		}
 	}
 
 	return (
