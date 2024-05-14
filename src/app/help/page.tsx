@@ -4,9 +4,10 @@ import React, { useState } from "react";
 import { ThemeContext } from "../../components/ThemeProvider";
 import "../util.css";
 import { LOGO } from "@/components/LOGO";
-import { FaAngleDown, FaAngleUp } from "react-icons/fa6";
 import { useRouter } from "next/navigation";
 import Footer from "@/components/homepage/Footer";
+import { support } from "@/util/emails";
+import OpenDiv from "@/util/custom_divs";
 
 export default function Help() {
 	const theme = React.useContext(ThemeContext);
@@ -91,7 +92,7 @@ export default function Help() {
 								style={{
 									color: theme?.theme.colors.text_link,
 								}}
-								href="mailto:support@dxby.dev">
+								href={`mailto:${support}`}>
 								contact us
 								{/* //TODO: May replace with support ticket page */}
 							</a>
@@ -119,33 +120,3 @@ export default function Help() {
 		</div>
 	);
 }
-
-interface OpenDiv {
-	title: string;
-	children?: React.ReactNode;
-}
-const OpenDiv: React.FC<OpenDiv> = ({ title, children }) => {
-	const router = useRouter();
-	const theme = React.useContext(ThemeContext);
-	const [isOpen, setisOpen] = useState(false);
-
-	return (
-		<div
-			style={{ color: theme?.theme.colors.text }}
-			className="w-full h-fit min-h-10 flex flex-col overflow-x-hidden break-words mt-5 cursor-pointer">
-			<div
-				className="font-bold flex flex-row items-center select-none"
-				onClick={() => setisOpen(!isOpen)}>
-				{isOpen ? (
-					<FaAngleDown color="white" size={20} />
-				) : (
-					<FaAngleUp color="white" size={20} />
-				)}
-				<h1 className="text-xl ml-10">{title}</h1>
-			</div>
-			<div className={isOpen ? "mt-1 flex flex-col" : "hidden"}>
-				{children}
-			</div>
-		</div>
-	);
-};

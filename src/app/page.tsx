@@ -11,6 +11,7 @@ import Image from "next/image";
 import { slideInFromLeft, slideInFromRight, slideInFromTop } from "@/util/motion";
 import { ThemeContext } from "../components/ThemeProvider";
 import { usePathname, useRouter } from "next/navigation";
+import { main } from "@/util/emails";
 
 function Index() {
 	const theme = React.useContext(ThemeContext);
@@ -49,8 +50,8 @@ function Index() {
 					<div className="flex w-fit flex-col">
 						<div className="max-w-[800px] rounded-md flex flex-row flex-wrap justify-center items-start gap-4 select-none">
 							<Card title="Is SPARK secure?" content="Yes, because we work with encryption, not even we can see your private data." />
-							<Card title="What's SPARK?" content="Simple, user-friendly social media platform with the aim of bringing people closer together." />
-							<Card title="Why SPARK?" content="It offers many opportunities to find more friends with the same interests. It's worth a try!" />
+							<Card title="What&apos;s SPARK?" content="Simple, user-friendly social media platform with the aim of bringing people closer together." />
+							<Card title="Why SPARK?" content="It offers many opportunities to find more friends with the same interests. It&apos;s worth a try!" />
 						</div>
 						<div className={`mt-5 h-fit flex flex-col justify-center items-center ${isTokenSet ? "hidden" : ""}`}>
 							<div style={{ background: theme?.theme.colors.primary, borderColor: theme?.theme.colors.accent }} onClick={() => router.push( isTokenSet ? "/home" : "/auth/login")} className="border select-none hover:opacity-100 w-52 min-h-[55px] p-2 rounded-md flex flex-row justify-center items-center cursor-pointer transition-all ease-in duration-75 hover:-translate-y-1 shadow-yellow-500 hover:shadow-lg">
@@ -143,8 +144,8 @@ function Index() {
 								<h1 className="font-bold italic text-2xl h-fit" style={{ color: theme?.theme.colors.text_secondary }}>
 									Contact us
 								</h1>
-								<a style={{ color: theme?.theme.colors.text_link }} href="mailto:spark-org@dxby.dev" className="ml-5 font-semibold italic text-3xl">
-									spark-org@dxby.dev
+								<a style={{ color: theme?.theme.colors.text_link }} href={`mailto:${main}`} className="ml-5 font-semibold italic text-3xl">
+									{main}
 								</a>
 							</div>
 						</div>

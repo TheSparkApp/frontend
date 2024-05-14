@@ -26,11 +26,17 @@ export const NavBar = () => {
 					<div onClick={() => router.push("/#whats-it")} style={{ color: theme?.theme.colors.text }} className="flex flex-row justify-center select-none hideon-phone hover:opacity-80 items-center cursor-pointer ml-3 p-2 hover:translate-x-1 hover:-translate-y-1 text-nowrap rounded-md transition-all ease-in duration-75">
 						<span className="font-semibold text-base">What&apos;s SPARK</span>
 					</div>
-					<div onClick={() => router.push("/privacy-policy")} style={{ color: theme?.theme.colors.text }} className="flex flex-row justify-center select-none hideon-phone hover:opacity-80 items-center cursor-pointer ml-3 p-2 hover:translate-x-1 hover:-translate-y-1 text-nowrap rounded-md transition-all ease-in duration-75">
+					{/* <div onClick={() => router.push("/privacy-policy")} style={{ color: theme?.theme.colors.text }} className="flex flex-row justify-center select-none hideon-phone hover:opacity-80 items-center cursor-pointer ml-3 p-2 hover:translate-x-1 hover:-translate-y-1 text-nowrap rounded-md transition-all ease-in duration-75">
 						<span className="font-semibold text-base">Privacy Policies</span>
 					</div>
 					<div onClick={() => router.push("/terms-of-service")} style={{ color: theme?.theme.colors.text }} className="flex flex-row justify-center select-none hideon-phone hover:opacity-80 items-center cursor-pointer ml-3 p-2 hover:translate-x-1 hover:-translate-y-1 text-nowrap rounded-md transition-all ease-in duration-75">
 						<span className="font-semibold text-base">Terms of Service</span>
+					</div> */}
+					<div onClick={() => router.push("/safety")} style={{ color: theme?.theme.colors.text }} className="flex flex-row justify-center select-none hideon-phone hover:opacity-80 items-center cursor-pointer ml-3 p-2 hover:translate-x-1 hover:-translate-y-1 text-nowrap rounded-md transition-all ease-in duration-75">
+						<span className="font-semibold text-base">Safety</span>
+					</div>
+					<div onClick={() => router.push("/support")} style={{ color: theme?.theme.colors.text }} className="flex flex-row justify-center select-none hideon-phone hover:opacity-80 items-center cursor-pointer ml-3 p-2 hover:translate-x-1 hover:-translate-y-1 text-nowrap rounded-md transition-all ease-in duration-75">
+						<span className="font-semibold text-base">Support</span>
 					</div>
 					<div onClick={() => router.push("/blog")} style={{ color: theme?.theme.colors.text }} className="flex flex-row justify-center select-none hideon-phone hover:opacity-80 items-center cursor-pointer ml-3 p-2 hover:translate-x-1 hover:-translate-y-1 text-nowrap rounded-md transition-all ease-in duration-75">
 						<span className="font-semibold text-base">Blog</span>
