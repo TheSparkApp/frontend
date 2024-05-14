@@ -167,7 +167,9 @@ export default function LoginPage() {
 													.text_link,
 											}}
 											onClick={() =>
-												router.push("/auth/reset-password")
+												router.push(
+													"/auth/reset-password"
+												)
 											}>
 											Reset your password
 										</a>
@@ -176,7 +178,8 @@ export default function LoginPage() {
 								<button
 									id="login-btn"
 									style={{
-										background: theme?.theme.colors.secondary,
+										background:
+											theme?.theme.colors.secondary,
 										color: theme?.theme.colors.text,
 									}}
 									type="submit"

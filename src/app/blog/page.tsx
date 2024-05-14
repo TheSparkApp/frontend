@@ -15,18 +15,35 @@ export default function Blog() {
 	const router = useRouter();
 	return (
 		<div className="flex flex-col overflow-x-hidden overflow-y-hidden">
-			<main className="w-full h-screen flex flex-col overflow-x-hidden overflow-y-auto justify-start pb-5 items-center transition-all ease-in duration-75" style={{ background: theme?.theme.colors.background }}>
+			<main
+				className="w-full h-screen flex flex-col overflow-x-hidden overflow-y-auto justify-start pb-5 items-center transition-all ease-in duration-75"
+				style={{ background: theme?.theme.colors.background }}>
 				<NavBar />
 				<br></br>
 				<br></br>
 				<div className="w-11/12 max-w-[900px] items-start justify-center flex flex-col mb-10">
 					<div className="w-full items-center justify-center flex flex-col">
-						<LOGO width="320px" height="120px" white={!theme?.theme.colors.logo_white} />
-						<h1 style={{ color: theme?.theme.colors.text }} className="text-5xl font-black italic">SPARK&apos;S BLOGS</h1>
+						<LOGO
+							width="320px"
+							height="120px"
+							white={!theme?.theme.colors.logo_white}
+						/>
+						<h1
+							style={{ color: theme?.theme.colors.text }}
+							className="text-5xl font-black italic">
+							SPARK&apos;S BLOGS
+						</h1>
 					</div>
 				</div>
 				<div className="flex flex-row w-10/12 min-w-[400px] max-w-[1500px] justify-center flex-wrap gap-5">
-					<BlogPost title="Release" description="How we released Spark" thumbnail="/blogexample.jpg" id="1" created="1715519669" views="123123"/>
+					<BlogPost
+						title="Release"
+						description="How we released Spark"
+						thumbnail="/blogexample.jpg"
+						id="1"
+						created="1715519669"
+						views="123123"
+					/>
 				</div>
 			</main>
 		</div>
@@ -41,26 +58,53 @@ interface BlogProps {
 	views: string;
 }
 
-const BlogPost: React.FC<BlogProps> = ({ title, description, thumbnail, id, created, views }) => {
+const BlogPost: React.FC<BlogProps> = ({
+	title,
+	description,
+	thumbnail,
+	id,
+	created,
+	views,
+}) => {
 	const theme = React.useContext(ThemeContext);
 	const router = useRouter();
 	const formattedViews = <NumberFormatter value={parseInt(views)} />;
 	const formattedTimestamp = <DateFormatter timestamp={parseInt(created)} />;
 	return (
-		<div style={{ borderColor: theme?.theme.colors.accent }} onClick={() => router.push("/blog/"+id.toString())} className="flex group relative select-none flex-col w-[400px] h-[200px] cursor-pointer hover:shadow-xl shadow-black overflow-hidden rounded-md border border-spacing-1.5 hover:translate-x-1 hover:-translate-y-2 ease-in transition-all duration-75">
+		<div
+			style={{ borderColor: theme?.theme.colors.accent }}
+			onClick={() => router.push("/blog/" + id.toString())}
+			className="flex group relative select-none flex-col w-[400px] h-[200px] cursor-pointer hover:shadow-xl shadow-black overflow-hidden rounded-md border border-spacing-1.5 hover:translate-x-1 hover:-translate-y-2 ease-in transition-all duration-75">
 			<div className="h-full w-full group-hover:blur-sm transition-all duration-75 ease-in">
-				<Image alt="thumbnail" width={0} height={0} src={thumbnail} sizes="100vw" className="w-full h-auto rounded-md object-cover drag-none"/>
+				<Image
+					alt="thumbnail"
+					width={0}
+					height={0}
+					src={thumbnail}
+					sizes="100vw"
+					className="w-full h-auto rounded-md object-cover drag-none"
+				/>
 			</div>
-			<div style={{ background: theme?.theme.colors.primary, color: theme?.theme.colors.text }} className="absolute group-hover:translate-y-0 p-2 flex flex-col shadow-black group-hover:shadow-lg translate-y-20 bottom-0 ease-in transition-all duration-100 w-full">
+			<div
+				style={{
+					background: theme?.theme.colors.primary,
+					color: theme?.theme.colors.text,
+				}}
+				className="absolute group-hover:translate-y-0 p-2 flex flex-col shadow-black group-hover:shadow-lg translate-y-20 bottom-0 ease-in transition-all duration-100 w-full">
 				<div className="flex flex-row items-center">
 					<h1 className="text-xl font">{title}</h1>
-					<p className="text-sm ml-5 font opacity-75 mt-1">{formattedTimestamp}</p>
+					<p className="text-sm ml-5 font opacity-75 mt-1">
+						{formattedTimestamp}
+					</p>
 				</div>
 				<div className="flex flex-row items-center">
 					<div className="max-w-[300px] w-[300px] h-fit overflow-hidden overflow-ellipsis whitespace-nowrap">
 						<p>{description}</p>
 					</div>
-					<p className="text-sm ml-5 font opacity-75 mt-1 flex flex-row items-center gap-1"><FaEye />{formattedViews}</p>
+					<p className="text-sm ml-5 font opacity-75 mt-1 flex flex-row items-center gap-1">
+						<FaEye />
+						{formattedViews}
+					</p>
 				</div>
 			</div>
 		</div>

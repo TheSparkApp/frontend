@@ -358,7 +358,9 @@ export default function RegisterPage() {
 											I have read the{" "}
 										</label>
 										<a
-											onClick={() => router.push("/privacy-policy")}
+											onClick={() =>
+												router.push("/privacy-policy")
+											}
 											className="text-sm opacity-100 font-base ml-1 cursor-pointer"
 											style={{
 												color: theme?.theme.colors
@@ -375,7 +377,9 @@ export default function RegisterPage() {
 											and{" "}
 										</label>
 										<a
-											onClick={() => router.push("/privacy-policy")}
+											onClick={() =>
+												router.push("/privacy-policy")
+											}
 											className="text-sm opacity-100 font-base ml-1 cursor-pointer"
 											style={{
 												color: theme?.theme.colors
@@ -396,7 +400,8 @@ export default function RegisterPage() {
 								<button
 									id="register-btn"
 									style={{
-										background: theme?.theme.colors.secondary,
+										background:
+											theme?.theme.colors.secondary,
 										color: theme?.theme.colors.text,
 									}}
 									type="submit"
@@ -417,7 +422,9 @@ export default function RegisterPage() {
 											color: theme?.theme.colors
 												.text_link,
 										}}
-										onClick={() => router.push("/auth/login")}>
+										onClick={() =>
+											router.push("/auth/login")
+										}>
 										Log in
 									</a>
 								</div>

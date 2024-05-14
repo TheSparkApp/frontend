@@ -34,9 +34,9 @@ export default function Safety() {
 					</div>
 					<span>
 						Our aim is to establish a secure and reliable platform
-						for our users, which is why we&apos;ve dedicated this SAFETY
-						page to assist you and provide a curated collection of
-						helpful links.
+						for our users, which is why we&apos;ve dedicated this
+						SAFETY page to assist you and provide a curated
+						collection of helpful links.
 					</span>
 				</div>
 				<div

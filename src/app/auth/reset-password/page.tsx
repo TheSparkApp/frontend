@@ -51,7 +51,6 @@ export default function TwoFactorPage() {
 		setbtn_status("Submit");
 	};
 
-
 	useEffect(() => {
 		setCodeError("Enter Code");
 		setPasswordError("Enter new password"); //TODO: Password checker
@@ -144,10 +143,10 @@ export default function TwoFactorPage() {
 											onChange={handlePasswordChange}
 										/>
 										<label
-										htmlFor="password"
-										className="block text-xs -mt-0 font-bold italic opacity-75 text-red-500">
-										{passwordError}
-									</label>
+											htmlFor="password"
+											className="block text-xs -mt-0 font-bold italic opacity-75 text-red-500">
+											{passwordError}
+										</label>
 									</div>
 								</div>
 								<button
@@ -156,7 +155,9 @@ export default function TwoFactorPage() {
 										background: theme?.theme.colors.accent,
 										color: theme?.theme.colors.text,
 									}}
-									disabled={codeError != "" || passwordError != ""}
+									disabled={
+										codeError != "" || passwordError != ""
+									}
 									onClick={handleSubmit}
 									type="submit"
 									className={`w-full h-10 font-semibold text-xl rounded-sm mt-5 transition-all ease-in hover:opacity-90 hover:rounded-md duration-[45ms] disabled:opacity-50 disabled:hover:rounded-sm disabled:cursor-no-drop`}>

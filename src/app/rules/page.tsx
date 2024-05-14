@@ -54,7 +54,7 @@ export default function PrivacyPolicies() {
 						<ol
 							style={{ color: theme?.theme.colors.text_link }}
 							className="">
-							<Item id="whatsthis" content="What&apos;s this?" />
+							<Item id="whatsthis" content="What's this?" />
 						</ol>
 					</div>
 

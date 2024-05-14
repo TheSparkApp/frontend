@@ -57,9 +57,9 @@ export default function TOS() {
 							<Item id="whoarewe" content="Who are we" />
 							<Item
 								id="software"
-								content="Software in Spark&apos;s services"
+								content="Software in Spark's services"
 							/>
-							<Item id="account" content="Your Spark&apos; account" />
+							<Item id="account" content="Your Spark' account" />
 							<Item
 								id="ageRequirements"
 								content="Age limits and duties of parents and guardians"
@@ -72,7 +72,7 @@ export default function TOS() {
 							/>
 							<Item
 								id="servicesAsIs"
-								content="Services &apos;AS IS&apos;"
+								content="Services 'AS IS'"
 							/>
 							<Item
 								id="whatToExpect"
@@ -80,7 +80,7 @@ export default function TOS() {
 							/>
 							<Item
 								id="restrictions"
-								content="Restrictions on your use of Spark&apos;s services"
+								content="Restrictions on your use of Spark's services"
 							/>
 							<Item
 								id="limitationOfLiability"
