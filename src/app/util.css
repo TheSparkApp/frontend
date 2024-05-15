@@ -40,3 +40,7 @@ button {
 * {
 	outline: #ffb100;
 }
+select option {
+	@apply font-semibold rounded-sm;
+	height: 10px !important; 
+}

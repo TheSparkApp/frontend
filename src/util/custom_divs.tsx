@@ -42,7 +42,7 @@ export const CardDiv: React.FC<CardDiv> = ({ text, link }) => {
 
 	return (
 		<div
-			className="border border-spacing-1.5 p-5 text-xl rounded-md select-none cursor-pointer  font-bold hover:border-none"
+			className="border select-none border-spacing-1.5 text-xl rounded-md hover:shadow-2xl shadow-black hover:-translate-y-2 translate-x-0 hover:translate-x-1 translate-y-0 cursor-pointer font-bold p-3 duration-200 ease-in transition-all"
 			style={{
 				color: theme?.theme.colors.text,
 				background: theme?.theme.colors.background,

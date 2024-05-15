@@ -103,7 +103,7 @@ export default function Help() {
 							also memorable password!
 						</span>
 					</OpenDiv>
-
+					{/* //TODO: MORE FAQS */}
 					<OpenDiv title="What should I do if I am banned?">
 						<span className="font-bold">
 							Quite simply, there&apos;s not much more you can do.{" "}

@@ -6,9 +6,12 @@ import "../util.css";
 import Footer from "@/components/homepage/Footer";
 import { LOGO } from "@/components/LOGO";
 import { CardDiv } from "@/util/custom_divs";
+import { useRouter } from "next/navigation";
 
 export default function Safety() {
 	const theme = React.useContext(ThemeContext);
+	const router = useRouter();
+
 	return (
 		<div className="flex flex-col overflow-x-hidden overflow-y-hidden">
 			<main
@@ -19,7 +22,7 @@ export default function Safety() {
 				<br></br>
 				<div
 					style={{ color: theme?.theme.colors.text }}
-					className="w-11/12 max-w-[900px] items-start justify-center flex flex-col mb-5">
+					className="w-11/12 max-w-[900px] items-start select-none justify-center flex flex-col mb-5">
 					<div className="w-full items-center justify-center flex flex-col mb-5">
 						<LOGO
 							width="320px"
@@ -28,7 +31,7 @@ export default function Safety() {
 						/>
 						<h1
 							style={{ color: theme?.theme.colors.text }}
-							className="text-5xl font-black italic">
+							className="text-5xl font-black italic text-center">
 							SAFETY
 						</h1>
 					</div>
@@ -40,7 +43,7 @@ export default function Safety() {
 					</span>
 				</div>
 				<div
-					className="w-11/12 max-w-[900px] items-start justify-center flex-row mb-10 gap-x-5 gap-y-2 rounded-md flex flex-wrap p-2"
+					className="w-11/12 max-w-[900px] items-center justify-center flex-row mb-10 gap-x-5 gap-y-3 rounded-md flex flex-wrap p-2"
 					style={{ background: theme?.theme.colors.secondary }}>
 					<CardDiv text="Terms of service" link="/terms-of-service" />
 					<CardDiv text="Privacy Policies" link="/privacy-policy" />
@@ -48,7 +51,9 @@ export default function Safety() {
 						text="Rules of use and interaction"
 						link="/rules"
 					/>
+					<CardDiv text="Support" link="/support" />
 				</div>
+
 			</main>
 			<Footer />
 		</div>
