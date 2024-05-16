@@ -69,7 +69,7 @@ select option {
 	height: 10px !important; 
 }
 a:hover {
-	@apply ease-in transition-all duration-75 no-underline hover:underline;
+	@apply ease-in transition-all duration-200 no-underline hover:underline;
 }
 br {
 	@apply select-none;

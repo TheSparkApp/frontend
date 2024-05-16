@@ -55,6 +55,13 @@ export default function VerifyEmailPage() {
 	- Form validation (XSS, SQL Injection, empty forms, etc)
 	*/
 
+
+	/* 
+	PHONE -- CODE -- SERVER --> PC Wartet auf token
+	PHONE -- TOKEN --> PC "Willst du dich einloggen"
+							Ja? : Setze Token
+	*/
+
 	return (
 		<div className="flex flex-col overflow-x-hidden overflow-y-scroll">
 			<main
