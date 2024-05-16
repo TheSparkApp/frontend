@@ -68,7 +68,7 @@ function Index() {
 								content="Yes, because we work with encryption, not even we can see your private data."
 							/>
 							<Card
-								title="What&apos;s SPARK?"
+								title="What's SPARK?"
 								content="Simple, user-friendly social media platform with the aim of bringing people closer together."
 							/>
 							<Card
@@ -103,7 +103,7 @@ function Index() {
 					<div
 						style={{ background: theme?.theme.colors.primary }}
 						className=" pb-10 pt-2 w-full mt-10 flex-col flex items-center">
-						<div className="w-11/12 max-w-[1200px] h-full translate-y-4">
+						<div className="w-11/12 max-w-[1200px] h-full translate-y-4 flex flex-col">
 							<motion.div
 								variants={slideInFromLeft(0.5)}
 								className="flex flex-row">
@@ -142,7 +142,7 @@ function Index() {
 											size={45}
 										/>
 										<span
-											className="font-bold italic text-5xl ml-2"
+											className="font-bold italic text-5xl mobile-5xl ml-2"
 											style={{
 												color: theme?.theme.colors
 													.text_secondary,
@@ -185,7 +185,7 @@ function Index() {
 											size={45}
 										/>
 										<span
-											className="font-bold italic text-5xl ml-2"
+											className="font-bold italic text-5xl mobile-5xl ml-2"
 											style={{
 												color: theme?.theme.colors
 													.text_secondary,
@@ -225,7 +225,7 @@ function Index() {
 											size={45}
 										/>
 										<span
-											className="font-bold italic text-5xl ml-2"
+											className="font-bold italic text-5xl mobile-5xl ml-2"
 											style={{
 												color: theme?.theme.colors
 													.text_secondary,
@@ -277,12 +277,12 @@ function Index() {
 							/>
 							<div className="ml-3 mr-5 flex flex-row items-center">
 								<span
-									className="font-semibold text-3xl"
+									className="font-semibold text-3xl mobile-3xl"
 									style={{
 										color: theme?.theme.colors
 											.text_secondary,
 									}}>
-									<p className="text-5xl font-bold italic">
+									<p className="text-5xl mobile-5xl font-bold italic">
 										SPARK
 									</p>{" "}
 									connects you with others, helps you make new
@@ -297,7 +297,7 @@ function Index() {
 						style={{ background: theme?.theme.colors.primary }}
 						className=" pb-5 pt-2 w-full mt-2 flex-col flex items-center">
 						<p
-							className="text-5xl font-bold italic"
+							className="text-5xl mobile-5xl font-bold italic"
 							style={{
 								color: theme?.theme.colors.text_secondary,
 							}}>
@@ -335,7 +335,7 @@ function Index() {
 						<div className="w-11/12 max-w-[1200px] h-full flex flex-col justify-center items-start">
 							<div className="flex-row flex">
 								<h1
-									className="font-bold italic text-6xl h-fit"
+									className="font-bold italic text-6xl mobile-6xl h-fit"
 									style={{
 										color: theme?.theme.colors
 											.text_secondary,
@@ -345,7 +345,7 @@ function Index() {
 							</div>
 							<div className="flex-row flex justify-center items-center">
 								<h1
-									className="font-bold italic text-2xl h-fit"
+									className="font-bold italic text-2xl mobile-2xl h-fit"
 									style={{
 										color: theme?.theme.colors
 											.text_secondary,
@@ -357,15 +357,15 @@ function Index() {
 										color: theme?.theme.colors.text_link,
 									}}
 									href={`mailto:${main}`}
-									className="ml-5 font-semibold italic text-3xl">
+									className="ml-5 font-semibold italic text-3xl mobile-3xl">
 									{main}
 								</a>
 							</div>
 						</div>
 					</div>
 					<br></br>
-					<Footer />
 				</div>
+				<Footer />
 			</main>
 			{/* Footer reusen auf homepage seiten wie Privacy policy etc.. */}
 		</motion.div>
@@ -419,7 +419,7 @@ const DevCard: React.FC<DevCardProps> = ({ name, description, path }) => {
 					src={path}
 				/>
 				<p
-					className="text-3xl font-bold italic ml-5"
+					className="text-3xl mobile-3xl font-bold italic ml-5"
 					style={{ color: theme?.theme.colors.text }}>
 					{name}
 				</p>

@@ -22,11 +22,35 @@ a {
 	.hideon-phone {
 		display: none;
 	}
-	.hideon-phone {
-		display: none;
+	.show-phone {
+		display: block;
+	}
+	.justify-center-phone {
+		justify-items: center !important;
+	}
+	.items-center-phone {
+		align-items: center !important;
+	}
+	.mobile-6xl {
+		@apply text-4xl;
+	}
+	.mobile-5xl {
+		@apply text-3xl;
+	}
+	.mobile-4xl {
+		@apply text-2xl;
+	}
+	.mobile-3xl {
+		@apply text-xl;
+	}
+	.mobile-2xl {
+		@apply text-xl;
+	}
+	.mobile-xl {
+		@apply text-lg;
 	}
 }
-@media (min-width: 601px) and (max-width: 900px) {
+@media (min-width: 601px) and (max-width: 920px) {
 	.hideon-ipad {
 		display: none;
 	}
@@ -46,4 +70,7 @@ select option {
 }
 a:hover {
 	@apply ease-in transition-all duration-75 no-underline hover:underline;
+}
+br {
+	@apply select-none;
 }

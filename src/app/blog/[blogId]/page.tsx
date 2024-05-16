@@ -62,7 +62,7 @@ export default function PostPage({ params }: Params) {
 				</div>
 				<h1
 					style={{ color: theme?.theme.colors.text }}
-					className="text-8xl text-center -translate-y-16 font-black italic select-none">
+					className="text-5xl mobile-5xl text-center -translate-y-16 font-black italic select-none">
 					{blogname}
 				</h1>
 				<div
