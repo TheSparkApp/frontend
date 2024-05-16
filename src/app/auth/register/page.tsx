@@ -155,6 +155,7 @@ export default function RegisterPage() {
 										style={{
 											background:
 												theme?.theme.colors.background,
+												color: theme?.theme.colors.text,
 										}}
 										autoCorrect="off"
 										autoComplete="off"
@@ -180,6 +181,7 @@ export default function RegisterPage() {
 										style={{
 											background:
 												theme?.theme.colors.background,
+												color: theme?.theme.colors.text,
 										}}
 										autoCorrect="off"
 										autoComplete="off"
@@ -204,6 +206,7 @@ export default function RegisterPage() {
 										style={{
 											background:
 												theme?.theme.colors.background,
+												color: theme?.theme.colors.text,
 										}}
 										autoCorrect="off"
 										autoComplete="off"
@@ -229,6 +232,7 @@ export default function RegisterPage() {
 										style={{
 											background:
 												theme?.theme.colors.background,
+												color: theme?.theme.colors.text,
 										}}
 										autoCorrect="off"
 										autoComplete="off"

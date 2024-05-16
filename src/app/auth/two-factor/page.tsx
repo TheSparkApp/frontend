@@ -92,6 +92,7 @@ export default function TwoFactorPage() {
 										style={{
 											background:
 												theme?.theme.colors.background,
+												color: theme?.theme.colors.text,
 										}}
 										autoCorrect="off"
 										autoComplete="off"

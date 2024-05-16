@@ -20,6 +20,7 @@ export default function TOS() {
 				<NavBar />
 				<br></br>
 				<br></br>
+				<br></br>
 				<div className="w-11/12 max-w-[900px] items-start justify-center flex flex-col mb-10">
 					<div className="w-full items-center justify-center flex flex-col">
 						<LOGO
@@ -57,9 +58,9 @@ export default function TOS() {
 							<Item id="whoarewe" content="Who are we" />
 							<Item
 								id="software"
-								content="Software in Spark's services"
+								content="Software in Spark&apos;s services"
 							/>
-							<Item id="account" content="Your Spark' account" />
+							<Item id="account" content="Your Spark&apos; account" />
 							<Item
 								id="ageRequirements"
 								content="Age limits and duties of parents and guardians"

@@ -38,6 +38,7 @@ export default function Support() {
 				<NavBar />
 				<br></br>
 				<br></br>
+				<br></br>
 				<div
 					style={{ color: theme?.theme.colors.text }}
 					className="w-11/12 max-w-[900px] items-start justify-center flex flex-col mb-10">
@@ -64,11 +65,15 @@ export default function Support() {
 						className="font-semibold text-xl mt-2 select-none">
 						Also read our{" "}
 						<a
-							className="opacity-100 cursor-pointer font-bold ml-1"
+							className="opacity-100 cursor-pointer font-bold"
 							style={{
 								color: theme?.theme.colors.text_link,
 							}}
-							onClick={() => router.push("/help")}>
+							href="/help"
+							onClick={(e) => {
+								e.preventDefault();
+								router.push("/help");
+							}}>
 							help page
 						</a>{" "}
 						where we already have a few FAQ&apos;s
@@ -114,11 +119,15 @@ export default function Support() {
 								respectful demeanor when interacting with our
 								support team and adhere to the{" "}
 								<a
-									className="opacity-100 cursor-pointer font-bold ml-1"
+									className="opacity-100 cursor-pointer font-bold"
 									style={{
 										color: theme?.theme.colors.text_link,
 									}}
-									onClick={() => router.push("/rules")}>
+									href="/rules"
+									onClick={(e) => {
+										e.preventDefault();
+										router.push("/rules");
+									}}>
 									Rules of use and interaction
 								</a>
 								. Please keep in mind that our support staff are
@@ -137,15 +146,17 @@ export default function Support() {
 							<span>
 								Once your issue has been successfully resolved
 								or there is no longer an issue, we kindly ask
-								you to
+								you to{" "}
 								<a
-									className="opacity-100 cursor-pointer font-bold ml-1"
+									className="opacity-100 cursor-pointer font-bold"
 									style={{
 										color: theme?.theme.colors.text_link,
 									}}
-									onClick={() =>
-										router.push("/home/settings/tickets")
-									}>
+									href="/home/settings/tickets"
+									onClick={(e) => {
+										e.preventDefault();
+										router.push("/home/settings/tickets");
+									}}>
 									navigate to your ticket
 								</a>{" "}
 								and request its closure. This helps us keep our
@@ -166,13 +177,15 @@ export default function Support() {
 								report problems related to others, please use
 								our designated{" "}
 								<a
-									className="opacity-100 cursor-pointer font-bold ml-1"
+									className="opacity-100 cursor-pointer font-bold"
 									style={{
 										color: theme?.theme.colors.text_link,
 									}}
-									onClick={() =>
-										router.push("/terms-of-service/report")
-									}>
+									href="/terms-of-service/report"
+									onClick={(e) => {
+										e.preventDefault();
+										router.push("/terms-of-service/report");
+									}}>
 									report page
 								</a>
 								. By keeping each platform separate, we can
@@ -223,7 +236,7 @@ export default function Support() {
 						personal data.
 					</h1>
 					<div className="w-full flex-col flex justify-center items-center mt-3">
-						<TicketForm theme={theme}/>
+						<TicketForm theme={theme} />
 					</div>
 				</div>
 				<Footer />

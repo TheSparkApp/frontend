@@ -20,6 +20,7 @@ export default function Safety() {
 				<NavBar />
 				<br></br>
 				<br></br>
+				<br></br>
 				<div
 					style={{ color: theme?.theme.colors.text }}
 					className="w-11/12 max-w-[900px] items-start select-none justify-center flex flex-col mb-5">
@@ -43,8 +44,7 @@ export default function Safety() {
 					</span>
 				</div>
 				<div
-					className="w-11/12 max-w-[900px] items-center justify-center flex-row mb-10 gap-x-5 gap-y-3 rounded-md flex flex-wrap p-2"
-					style={{ background: theme?.theme.colors.secondary }}>
+					className="w-11/12 max-w-[900px] items-center justify-center flex-row mb-10 gap-x-5 gap-y-3 rounded-md flex flex-wrap p-2 pb-5">
 					<CardDiv text="Terms of service" link="/terms-of-service" />
 					<CardDiv text="Privacy Policies" link="/privacy-policy" />
 					<CardDiv

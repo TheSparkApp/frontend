@@ -110,6 +110,7 @@ export default function LoginPage() {
 										style={{
 											background:
 												theme?.theme.colors.background,
+												color: theme?.theme.colors.text,
 										}}
 										autoCorrect="off"
 										autoComplete="off"
@@ -140,6 +141,7 @@ export default function LoginPage() {
 										style={{
 											background:
 												theme?.theme.colors.background,
+											color: theme?.theme.colors.text,
 										}}
 										type="password"
 										autoCorrect="off"

@@ -40,14 +40,14 @@ function Index() {
 			animate="visible"
 			className="flex flex-col overflow-x-hidden overflow-y-scroll">
 			<main
-				className="w-full h-screen flex flex-col overflow-hidden transition-all ease-in duration-75"
+				className="w-full h-screen flex flex-col overflow-x-hidden overflow-y-auto justify-start items-center transition-all ease-in duration-75"
 				style={{ background: theme?.theme.colors.background }}>
 				<NavBar />
 				<br></br>
 				<br></br>
 
-				<div className="w-full h-fit flex flex-col items-center overflow-y-scroll">
-					<div className="flex flex-row mt-10 ml-10 select-none z-50">
+				<div className="w-full items-center justify-center flex flex-col mb-10">
+					<div className="flex flex-row mt-10 ml-10 select-none">
 						<h1
 							className="text-6xl font-bold italic hideon-phone -translate-x-5"
 							style={{ color: theme?.theme.colors.text_third }}>
@@ -68,7 +68,7 @@ function Index() {
 								content="Yes, because we work with encryption, not even we can see your private data."
 							/>
 							<Card
-								title="What's SPARK?"
+								title="What&apos;s SPARK?"
 								content="Simple, user-friendly social media platform with the aim of bringing people closer together."
 							/>
 							<Card
@@ -82,7 +82,6 @@ function Index() {
 							}`}>
 							<div
 								style={{
-									background: theme?.theme.colors.primary,
 									borderColor: theme?.theme.colors.accent,
 								}}
 								onClick={() =>
@@ -90,7 +89,7 @@ function Index() {
 										isTokenSet ? "/home" : "/auth/login"
 									)
 								}
-								className="border select-none hover:opacity-100 w-52 min-h-[55px] p-2 rounded-md flex flex-row justify-center items-center cursor-pointer transition-all ease-in duration-75 hover:-translate-y-1 shadow-yellow-500 hover:shadow-lg">
+								className="border select-none hover:opacity-100 w-52 min-h-[55px] p-2 rounded-md flex flex-row justify-center items-center cursor-pointer transition-all ease-in duration-75 hover:translate-x-1 hover:-translate-y-1">
 								<span
 									style={{
 										color: theme?.theme.colors.text_third,
@@ -387,10 +386,9 @@ const Card: React.FC<CardProps> = ({ title, content }) => {
 	return (
 		<div
 			style={{
-				background: theme?.theme.colors.primary,
 				borderColor: theme?.theme.colors.accent,
 			}}
-			className="border border-spacing-1.5 hover:opacity-100 opacity-75 text-white w-64 min-h-20 pb-5 rounded-md flex flex-col items-center cursor-pointer transition-all ease-in duration-75 hover:translate-x-1 hover:-translate-y-2 hover:z-10 hover:shadow-lg">
+			className="border border-spacing-1.5 hover:opacity-100 opacity-75 hover:border-spacing-2 text-white w-64 min-h-20 pb-5 rounded-md flex flex-col items-center cursor-pointer transition-all ease-in duration-75 hover:translate-x-1 hover:-translate-y-2 hover:z-10">
 			<h1
 				style={{ color: theme?.theme.colors.text }}
 				className="flex flex-row p-2 text-2xl font-bold">

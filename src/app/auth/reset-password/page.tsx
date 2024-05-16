@@ -99,6 +99,7 @@ export default function TwoFactorPage() {
 										style={{
 											background:
 												theme?.theme.colors.background,
+											color: theme?.theme.colors.text,
 										}}
 										autoCorrect="off"
 										autoComplete="off"
@@ -130,6 +131,7 @@ export default function TwoFactorPage() {
 												background:
 													theme?.theme.colors
 														.background,
+												color: theme?.theme.colors.text,
 											}}
 											type="password"
 											autoCorrect="off"

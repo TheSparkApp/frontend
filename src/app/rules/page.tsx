@@ -20,6 +20,7 @@ export default function PrivacyPolicies() {
 				<NavBar />
 				<br></br>
 				<br></br>
+				<br></br>
 				<div className="w-11/12 max-w-[900px] items-start justify-center flex flex-col mb-10">
 					<div className="w-full items-center justify-center flex flex-col">
 						<LOGO
@@ -54,7 +55,7 @@ export default function PrivacyPolicies() {
 						<ol
 							style={{ color: theme?.theme.colors.text_link }}
 							className="">
-							<Item id="whatsthis" content="What's this?" />
+							<Item id="whatsthis" content="What&apos;s this?" />
 						</ol>
 					</div>
 

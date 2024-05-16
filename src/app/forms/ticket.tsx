@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 interface TicketFormProps {
 	theme?: any;
@@ -8,6 +8,13 @@ const TicketForm: React.FC<TicketFormProps> = ({ theme }) => {
 	const [category, setCategory] = useState<string>("");
 	const [subject, setSubject] = useState<string>("");
 	const [email, setEmail] = useState<string>("");
+	const [isTokenSet, setIsTokenSet] = useState(false);
+
+	useEffect(() => {
+		if (localStorage.getItem("token")) {
+			setIsTokenSet(true);
+		} else setIsTokenSet(false);
+	}, []);
 
 	const handleCategoryChange = (
 		event: React.ChangeEvent<HTMLSelectElement>
@@ -31,7 +38,7 @@ const TicketForm: React.FC<TicketFormProps> = ({ theme }) => {
 
 	return (
 		<form
-            onSubmit={handleSubmit}
+			onSubmit={handleSubmit}
 			className="w-fit mt-2 max-w-[900px] min-w-[400px] pl-2 pr-2 justify-start items-center flex-col rounded-md flex p-2"
 			style={{
 				background: theme?.theme.colors.secondary,
@@ -92,12 +99,13 @@ const TicketForm: React.FC<TicketFormProps> = ({ theme }) => {
 					<input
 						style={{
 							background: theme?.theme.colors.background,
+							color: theme?.theme.colors.text,
 						}}
 						autoCorrect="off"
 						autoComplete="off"
 						id="subject"
 						name="subject"
-						className="min-w-full w-full h-10 rounded-sm mt-1 p-1 pl-2 pr-4 outline-none border-none text-white focus:rounded-md ease-in transition-all duration-75"
+						className="min-w-full w-full h-10 rounded-sm mt-1 p-1 pl-2 pr-4 outline-none border-none focus:rounded-md ease-in transition-all duration-75"
 						value={subject}
 						required
 						onChange={handleSubjectChange}
@@ -115,6 +123,7 @@ const TicketForm: React.FC<TicketFormProps> = ({ theme }) => {
 					<input
 						style={{
 							background: theme?.theme.colors.background,
+							color: theme?.theme.colors.text,
 						}}
 						autoCorrect="off"
 						autoComplete="off"
@@ -141,5 +150,6 @@ const TicketForm: React.FC<TicketFormProps> = ({ theme }) => {
 		</form>
 	);
 };
+
 
 export default TicketForm;

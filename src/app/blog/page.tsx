@@ -21,6 +21,7 @@ export default function Blog() {
 				<NavBar />
 				<br></br>
 				<br></br>
+				<br></br>
 				<div className="w-11/12 max-w-[900px] items-start justify-center flex flex-col mb-10">
 					<div className="w-full items-center justify-center flex flex-col">
 						<LOGO
@@ -31,19 +32,33 @@ export default function Blog() {
 						<h1
 							style={{ color: theme?.theme.colors.text }}
 							className="text-5xl font-black italic">
-							SPARK&apos;S BLOGS
+							SPARK&apos;S BLOG
 						</h1>
 					</div>
 				</div>
-				<div className="flex flex-row w-10/12 min-w-[400px] max-w-[1500px] justify-center flex-wrap gap-5">
-					<BlogPost
-						title="Release"
-						description="How we released Spark"
-						thumbnail="/blogexample.jpg"
-						id="1"
-						created="1715519669"
-						views="123123"
-					/>
+				<div className="flex flex-row w-10/12 min-w-[400px] max-w-[1500px] justify-center pl-4 pr-4 flex-wrap gap-5">
+					<div className="w-full h-10 flex flex-row justify-center items-center">
+						<span
+							className="font-bold text-xl text-nowrap"
+							style={{ color: theme?.theme.colors.text }}>
+							NEW
+						</span>
+						<div
+							className="w-full ml-5 h-0.5 rounded-md"
+							style={{
+								background: theme?.theme.colors.text,
+							}}></div>
+					</div>
+					<div className="flex w-11/12 ml-3 flex-row justify-start items-center flex-wrap gap-5">
+						<BlogPost
+							title="Release"
+							description="How we released Spark"
+							thumbnail="/blogexample.jpg"
+							id="1"
+							created="1715519669"
+							views="123123"
+						/>
+					</div>
 				</div>
 			</main>
 		</div>
@@ -74,7 +89,7 @@ const BlogPost: React.FC<BlogProps> = ({
 		<div
 			style={{ borderColor: theme?.theme.colors.accent }}
 			onClick={() => router.push("/blog/" + id.toString())}
-			className="flex group relative select-none flex-col w-[400px] h-[200px] cursor-pointer hover:shadow-xl shadow-black overflow-hidden rounded-md border border-spacing-1.5 hover:translate-x-1 hover:-translate-y-2 ease-in transition-all duration-75">
+			className="flex group relative select-none flex-col w-[400px] h-[200px] cursor-pointer hover:shadow-xl shadow-black overflow-hidden rounded-md border border-spacing-1.5 hover:translate-x-1 hover:-translate-y-2 ease-in transition-all duration-100">
 			<div className="h-full w-full group-hover:blur-sm transition-all duration-75 ease-in">
 				<Image
 					alt="thumbnail"

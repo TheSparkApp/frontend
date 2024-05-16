@@ -44,3 +44,6 @@ select option {
 	@apply font-semibold rounded-sm;
 	height: 10px !important; 
 }
+a:hover {
+	@apply ease-in transition-all duration-75 no-underline hover:underline;
+}

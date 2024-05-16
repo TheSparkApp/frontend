@@ -92,6 +92,7 @@ export default function VerifyEmailPage() {
 										style={{
 											background:
 												theme?.theme.colors.background,
+												color: theme?.theme.colors.text,
 										}}
 										autoCorrect="off"
 										autoComplete="off"
