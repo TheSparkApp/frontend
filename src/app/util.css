@@ -50,6 +50,14 @@ a {
 		@apply text-lg;
 	}
 }
+@media (max-width: 440px) {
+	.hide-phone2 {
+		display: none;
+	}
+	.show-phone2 {
+		display: block;
+	}
+}
 @media (min-width: 601px) and (max-width: 920px) {
 	.hideon-ipad {
 		display: none;
@@ -73,4 +81,17 @@ a:hover {
 }
 br {
 	@apply select-none;
+}
+@media (max-width: 1400px) {
+	.hide-home-bars {
+		display: none;
+	}
+}
+@media (max-width: 1000px) {
+	.hide-home-bars2 {
+		display: none;
+	}
+	.full-home {
+		@apply w-full;
+	}
 }

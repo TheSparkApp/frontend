@@ -272,7 +272,7 @@ function Index() {
 								alt=""
 								width={500}
 								height={500}
-								className="min-w-[300px] max-w-[300px] min-h-[300px] max-h-[300px] drag-none hideon-phone hideon-ipad"
+								className="min-w-[300px] max-w-[300px] min-h-[300px] max-h-[300px] drag-none hideon-phone hideon-ipad select-none"
 								src="/phone.png"
 							/>
 							<div className="ml-3 mr-5 flex flex-row items-center">
@@ -410,7 +410,7 @@ const DevCard: React.FC<DevCardProps> = ({ name, description, path }) => {
 			className="
 		 group ml-6 mr-6 mt-1 mb-3 hover:opacity-100 rounded-md flex flex-col justify-center items-center 
 		cursor-pointer transition-all ease-in duration-150 w-72 h-fit hover:h-fit hover:z-10">
-			<div className="flex flex-row w-72 mt-4 mb-2 ml-10 items-center justify-start">
+			<div className="flex flex-row w-72 mb-2 ml-10 items-center justify-start">
 				<Image
 					alt=""
 					width={50}
@@ -424,7 +424,7 @@ const DevCard: React.FC<DevCardProps> = ({ name, description, path }) => {
 					{name}
 				</p>
 			</div>
-			<div className="group-hover:h-20 group-hover:opacity-100 opacity-0 w-full h-0 mt-2 pb-2 max-w-64 transition-all ease-in duration-150 flex flex-col justify-center items-center">
+			<div className="group-hover:h-20 group-hover:opacity-100 opacity-0 w-full h-0 pb-2 max-w-64 transition-all ease-in duration-150 flex flex-col justify-center items-center">
 				<p
 					style={{ color: theme?.theme.colors.text_secondary }}
 					className="pl-1 pr-1 pt-1 pb-3 w-full h-full">
