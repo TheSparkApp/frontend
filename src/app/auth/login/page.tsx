@@ -56,7 +56,6 @@ export default function LoginPage() {
 	TODO:
 	- Integration with backend
 	- Form validation (XSS, SQL Injection, empty forms, etc)
-	- Theme for input field (currently the input fields background is always white)
 	*/
 
 	return (
@@ -82,7 +81,7 @@ export default function LoginPage() {
 					</div>
 					<div
 						style={{ background: theme?.theme.colors.primary }}
-						className="select-none rounded-lg shadow-lg min-h-[200px] h-fit pb-5 max-w-[800px] min-w-[480px] w-fit flex flex-row justify-start items-center">
+						className="select-none rounded-lg shadow-lg min-h-[200px] h-fit pb-5 max-w-[800px] min-w-[400px] w-fit flex flex-row justify-start items-center">
 						<div className="w-full h-full flex flex-col justify-start items-center">
 							<h1
 								style={{ color: theme?.theme.colors.text }}
@@ -110,7 +109,7 @@ export default function LoginPage() {
 										style={{
 											background:
 												theme?.theme.colors.background,
-												color: theme?.theme.colors.text,
+											color: theme?.theme.colors.text,
 										}}
 										autoCorrect="off"
 										autoComplete="off"

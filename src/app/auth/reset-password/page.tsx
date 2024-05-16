@@ -60,7 +60,6 @@ export default function TwoFactorPage() {
 	TODO:
 	- Integration with backend
 	- Form validation (XSS, SQL Injection, empty forms, etc)
-	- Theme for input field (currently the input fields background is always white)
 	*/
 
 	return (
@@ -71,7 +70,7 @@ export default function TwoFactorPage() {
 				<div className="w-full h-3/4 flex flex-row flex-wrap justify-center items-center pr-5 pl-5">
 					<div
 						style={{ background: theme?.theme.colors.primary }}
-						className="select-none rounded-lg shadow-lg min-h-[200px] h-fit pb-5 max-w-[800px] min-w-[480px] w-fit flex flex-row justify-start items-center">
+						className="select-none rounded-lg shadow-lg min-h-[200px] h-fit pb-5 max-w-[800px] min-w-[400px] w-fit flex flex-row justify-start items-center">
 						<div className="w-full h-full flex flex-col justify-start items-center">
 							<h1
 								style={{ color: theme?.theme.colors.text }}
@@ -103,7 +102,6 @@ export default function TwoFactorPage() {
 										}}
 										autoCorrect="off"
 										autoComplete="off"
-										autoFocus
 										id="code"
 										maxLength={6}
 										name="code"
@@ -136,7 +134,6 @@ export default function TwoFactorPage() {
 											type="password"
 											autoCorrect="off"
 											autoComplete="off"
-											autoFocus
 											id="password"
 											name="password"
 											required

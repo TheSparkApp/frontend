@@ -127,7 +127,7 @@ export default function RegisterPage() {
 					</div>
 					<div
 						style={{ background: theme?.theme.colors.primary }}
-						className="select-none rounded-lg shadow-lg min-h-[200px] h-fit pb-5 max-h-[700px] max-w-[800px] min-w-[480px] w-fit flex flex-row justify-start items-center">
+						className="select-none rounded-lg shadow-lg min-h-[200px] h-fit pb-5 max-h-[700px] max-w-[800px] min-w-[400px] w-fit flex flex-row justify-start items-center">
 						<div className="w-full h-full flex flex-col justify-start items-center">
 							<h1
 								style={{ color: theme?.theme.colors.text }}
