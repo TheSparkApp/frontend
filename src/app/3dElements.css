@@ -1,0 +1,5 @@
+.hover-3d:hover {
+	transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(10deg) rotateY(-10deg)
+		rotateZ(0deg) translateX(0px) translateY(0px) translateZ(0px)
+		skewX(0deg) skewY(0deg);
+}

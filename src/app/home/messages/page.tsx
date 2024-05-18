@@ -1,0 +1,5 @@
+import React from "react";
+
+export default function FriendPage() {
+	return <div>You are on subpage /messages/! TODO: Implement API and backend</div>;
+}

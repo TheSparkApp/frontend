@@ -51,8 +51,8 @@ export default function Blog() {
 					</div>
 					<div className="flex w-11/12 ml-3 flex-row justify-start items-center flex-wrap gap-5">
 						<BlogPost
-							title="Release"
-							description="How we released Spark"
+							title="Cats"
+							description="Cats"
 							thumbnail="/blogexample.jpg"
 							id="1"
 							created="1715519669"

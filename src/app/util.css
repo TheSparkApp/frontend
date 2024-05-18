@@ -91,7 +91,18 @@ br {
 	.hide-home-bars2 {
 		display: none;
 	}
+	.hide-home-bars2-w {
+		width: 80px !important;
+	}
 	.full-home {
 		@apply w-full;
 	}
+}
+.hoverBackground {
+    color: var(--text-color);
+    transition: background 0.3s;
+}
+
+.hoverBackground:hover {
+    background: var(--secondary-color);
 }
