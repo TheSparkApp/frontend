@@ -14,6 +14,8 @@ import {
 	FaCalendarDay,
 	FaCircleArrowUp,
 	FaEllipsisVertical,
+	FaEyeSlash,
+	FaGavel,
 	FaGear,
 	FaHouse,
 	FaImage,
@@ -56,16 +58,47 @@ export default function MainApp() {
 	const maxCharacters = 250;
 	const [remainingCharacters, setRemainingCharacters] =
 		useState(maxCharacters);
+	const [loading, setLoading] = useState(false);
+	const [posts, setPosts] = useState<any[]>([2,2,2,2,2,2]);
+	const containerRef = useRef<HTMLDivElement>(null);
 
-	const handleChange = (event: React.FormEvent<HTMLDivElement>) => {
-		const newValue = (event.target as HTMLDivElement).textContent;
-		if (newValue) {
-			setInputValue(newValue);
-		} else {
-			setInputValue("");
+	const loadMorePosts = () => {
+		// Hier könntest du die Logik zum Laden neuer Posts implementieren
+		// Zum Beispiel eine API-Anfrage machen und die neuen Posts zu `posts` hinzufügen
+		console.log("Loading more posts...");
+	};
+
+	const handleScroll = () => {
+		const container = containerRef.current;
+		if (container) {
+			const { scrollTop, scrollHeight, clientHeight } = container;
+			if (scrollHeight - scrollTop === clientHeight) {
+				// Scroller ist ganz unten
+				loadMorePosts();
+			}
+			// console.log(container)
+
 		}
 	};
 
+	useEffect(() => {
+		// Initialisiere deine Posts oder lade sie beim Mounten der Komponente
+		// setPosts([...initialPosts]);
+		// Oder führe eine API-Anfrage aus, um die initialen Posts zu laden
+
+		// Füge einen Event-Listener für das Scrollereignis hinzu
+		const container = containerRef.current;
+		if (container) {
+			container.addEventListener("scroll", handleScroll);
+		}
+
+		// Entferne den Event-Listener beim Komponentenabbau
+		return () => {
+			if (container) {
+				container.removeEventListener("scroll", handleScroll);
+			}
+		};
+	}, []);
 	useEffect(() => {
 		setRemainingCharacters(maxCharacters - inputValue.length);
 		const characterCountElement =
@@ -208,11 +241,15 @@ export default function MainApp() {
 								background: theme?.theme.colors.primary,
 							}}
 							className="min-w-[300px] w-full max-w-[800px] -mt-10 h-[93%] full-home rounded-md overflow-hidden">
-							<div className="w-full min-h-full h-full overflow-y-scroll flex flex-col">
-								<Post />
-								<Post />
-								<Post />
-								<Post />
+							<div className="w-full min-h-full h-full overflow-y-scroll flex flex-col pb-5" ref={containerRef}>
+								{posts.map((post, index) => (
+									<Post key={index} />
+								))}
+								{loading && (
+									<h1 className="w-full text-center">
+										Loading...
+									</h1>
+								)}
 							</div>
 						</div>
 						<div className="min-w-[200px] w-[300px] max-w-[400px] h-full hide-home-bars">
@@ -399,12 +436,34 @@ const Post: React.FC = () => {
 	const theme = React.useContext(ThemeContext);
 	const router = useRouter();
 	const likes = <NumberFormatter value={parseInt("432")} />;
+	const [showMenu, setShowMenu] = useState(false);
+	const menuRef = useRef<HTMLDivElement>(null);
+
+	useEffect(() => {
+		const handleClickOutside = (event: MouseEvent) => {
+			if (
+				menuRef.current &&
+				!menuRef.current.contains(event.target as Node)
+			) {
+				setShowMenu(false);
+			}
+		};
+
+		document.addEventListener("mousedown", handleClickOutside);
+
+		return () => {
+			document.removeEventListener("mousedown", handleClickOutside);
+		};
+	}, []);
+
 	return (
-		<div className="mb-0.5 w-full h-fit">
-			<div style={{ background: theme?.theme.colors.secondary }} className="w-full h-fit">
+		<div className="mb-1 w-full h-fit">
+			<div
+				style={{ background: theme?.theme.colors.secondary }}
+				className="w-full h-fit relative rounded-md overflow-hidden">
 				<div className="w-full h-14 flex flex-row pb-1 pt-1">
 					<div className="w-full flex-row flex h-full">
-						<div className="flex ml-2 justify-start cursor-pointer group items-center bg select-none drag-none w-fit">
+						<div className="flex ml-4 justify-start cursor-pointer group items-center bg select-none drag-none w-fit">
 							<Image
 								src={"/stein_pfp.png"}
 								width={50}
@@ -414,15 +473,28 @@ const Post: React.FC = () => {
 							/>
 						</div>
 						<div className="flex flex-col ml-2 select-none">
-							<h1 className="hover:underline cursor-pointer text-lg">
-								Username
-							</h1>
+							<div className="flex flex-row justify-center items-center">
+								<h1 className="hover:underline cursor-pointer text-lg">
+									Username
+								</h1>
+								<p
+									className="ml-3 hover:underline cursor-pointer font-bold"
+									style={{
+										color: theme?.theme.colors.text_link,
+									}}>
+									{" "}
+									· Follow(ed)
+								</p>
+							</div>
 							<p className="opacity-50 text-sm">
 								Yesterday at 10:08 PM
 							</p>
 						</div>
 					</div>
-					<div className="transition-all ease-in mr-2 duration-100 group min-w-10 rounded-md active:opacity-100 opacity-75">
+					<div
+						className="transition-all ease-in mr-2 duration-100 group min-w-10 rounded-md active:opacity-100 opacity-75"
+						ref={menuRef}
+						onClick={() => setShowMenu(!showMenu)}>
 						<div className="w-full flex flex-row justify-center items-center cursor-pointer select-none rounded-md h-full">
 							<FaEllipsisVertical size={20} />
 						</div>
@@ -451,12 +523,19 @@ const Post: React.FC = () => {
 				<div className="w-full min-h-14 flex flex-col justify-center items-center overflow-hidden">
 					<div className="w-full h-full flex flex-row justify-center items-center mr-1 ml-1">
 						<div className="flex flex-row select-none pl-5 pr-5 h-full w-fit min-w-32 cursor-pointer opacity-50 active:opacity-100 justify-center items-center">
-							<FaCircleArrowUp size={25} className="min-w-[32px]" />
-							<span className="text-xl ml-1.5 ellipsis w-full text-center">{likes}</span>
+							<FaCircleArrowUp
+								size={25}
+								className="min-w-[32px]"
+							/>
+							<span className="text-xl ml-1.5 ellipsis w-full text-center">
+								{likes}
+							</span>
 						</div>
 						<div className="flex flex-row select-none pl-5 pr-5 h-full max-w-[250px] w-full cursor-pointer opacity-50 active:opacity-100 justify-center items-center border-l border-black">
 							<FaMessage size={25} className="min-w-[32px]" />
-							<span className="text-lg ml-5 ellipsis w-full text-center">Comment</span>
+							<span className="text-lg ml-5 ellipsis w-full text-start">
+								Comment
+							</span>
 						</div>
 						<div className="flex flex-row select-none h-full min-w-16 cursor-pointer opacity-50 active:opacity-100 justify-center items-center border-l border-black">
 							<FaBookmark size={25} />
@@ -466,6 +545,24 @@ const Post: React.FC = () => {
 						</div>
 					</div>
 				</div>
+				{showMenu && (
+					<div
+						ref={menuRef}
+						className="absolute top-10 select-none right-5 w-36 h-fit overflow-hidden rounded-[6px] shadow-black shadow-sm p-2 border"
+						style={{
+							background: theme?.theme.colors.primary,
+							borderColor: theme?.theme.colors.secondary,
+						}}>
+						<div className="hover:opacity-100 mb-1 opacity-75 cursor-pointer flex flex-row justify-start items-center">
+							<FaEyeSlash />
+							<span className="ml-1">Not interested</span>
+						</div>
+						<div className="hover:opacity-100 mb-1 opacity-75 cursor-pointer flex flex-row justify-start items-center">
+							<FaGavel />
+							<span className="ml-1">Report</span>
+						</div>
+					</div>
+				)}
 			</div>
 		</div>
 	);
@@ -519,7 +616,9 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images }) => {
 							className="absolute top-0 z-50 right-0 m-4 ml-0 mr-2 text-lg text-white p-5 bg-black bg-opacity-50 rounded-lg">
 							<FaX />
 						</button>
-						<div className="relative z-40 p-4 rounded-md" onClick={closeModal}>
+						<div
+							className="relative z-40 p-4 rounded-md"
+							onClick={closeModal}>
 							<div className="relative">
 								<Image
 									src={images[currentIndex]}
@@ -543,7 +642,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images }) => {
 					</div>
 				)}
 			</div>
-			<p className="text-center -mt-5 z-10 mb-2 rounded-full font-bold p-5 pt-1 pb-1 bg-black bg-opacity-50">
+			<p className="text-center -mt-5 z-10 select-none mb-2 rounded-full font-bold p-5 pt-1 pb-1 bg-black bg-opacity-50">
 				{currentIndex + 1} of {images.length}
 			</p>
 		</>
