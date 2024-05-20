@@ -75,8 +75,8 @@ export const LOGO_SMALL = ({ width = "1084", height = "1084" }) => {
 					d="M42 542C390.222 542 542 395.5 542 42C542 395.5 692.722 542 1042 542C692.722 542 542 692.722 542 1042C542 692.722 390.222 542 42 542Z"
 					fill="#FFB800"
 					stroke="#FFB800"
-					stroke-width="84"
-					stroke-linejoin="round"
+					strokeWidth="84"
+					strokeLinejoin="round"
 				/>
 			</svg>
 		</div>

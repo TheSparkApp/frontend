@@ -101,7 +101,7 @@ export const NavBar = () => {
 							/>
 							{newNotificationAmount > 0 ? (
 								<div
-									style={{ color: theme?.theme.colors.text }}
+									style={{ color: theme?.theme.colors.text_negative }}
 									className="absolute max-w-8 bg-red-500 w-fit h-5 flex justify-center items-center pl-1 pr-1 rounded-md translate-x-3 -translate-y-3">
 									<span className="font-semibold">
 										{newNotificationAmount > 9
@@ -111,7 +111,7 @@ export const NavBar = () => {
 								</div>
 							) : null}
 							<div
-								className="absolute hideon-phone hideon-ipad font-semibold scale-0 border translate-y-14 z-50 backdrop-blur-md p-2 pointer-events-none rounded-md group-hover:scale-100 duration-100 ease-in transition-all"
+								className="absolute hideon-phone hideon-ipad shadow-sm shadow-black font-semibold scale-0 border translate-y-14 z-50 backdrop-blur-md p-2 pointer-events-none rounded-md group-hover:scale-100 duration-100 ease-in transition-all"
 								style={{
 									borderColor: theme?.theme.colors.secondary,
 									color: theme?.theme.colors.text,
@@ -132,7 +132,7 @@ export const NavBar = () => {
 								className="group-hover:opacity-75"
 							/>
 							<div
-								className="absolute hideon-phone hideon-ipad font-semibold scale-0 border translate-y-14 z-50 backdrop-blur-md p-2 pointer-events-none rounded-md group-hover:scale-100 duration-100 ease-in transition-all"
+								className="absolute hideon-phone hideon-ipad shadow-sm shadow-black font-semibold scale-0 border translate-y-14 z-50 backdrop-blur-md p-2 pointer-events-none rounded-md group-hover:scale-100 duration-100 ease-in transition-all"
 								style={{
 									borderColor: theme?.theme.colors.secondary,
 									color: theme?.theme.colors.text,
@@ -153,7 +153,7 @@ export const NavBar = () => {
 								className="group-hover:opacity-75"
 							/>
 							<div
-								className="absolute hideon-phone hideon-ipad font-semibold scale-0 border translate-y-14 z-50 backdrop-blur-md p-2 pointer-events-none rounded-md group-hover:scale-100 duration-100 ease-in transition-all"
+								className="absolute hideon-phone hideon-ipad shadow-sm shadow-black font-semibold scale-0 border translate-y-14 z-50 backdrop-blur-md p-2 pointer-events-none rounded-md group-hover:scale-100 duration-100 ease-in transition-all"
 								style={{
 									borderColor: theme?.theme.colors.secondary,
 									color: theme?.theme.colors.text,
@@ -175,7 +175,7 @@ export const NavBar = () => {
 							/>
 							{newMessageAmount > 0 ? (
 								<div
-									style={{ color: theme?.theme.colors.text }}
+									style={{ color: theme?.theme.colors.text_negative }}
 									className="absolute max-w-8 bg-red-500 w-fit h-5 flex justify-center items-center pl-1 pr-1 rounded-md translate-x-3 -translate-y-3">
 									<span className="font-semibold">
 										{newMessageAmount > 9
@@ -185,7 +185,7 @@ export const NavBar = () => {
 								</div>
 							) : null}
 							<div
-								className="absolute hideon-phone hideon-ipad font-semibold scale-0 border translate-y-14 z-50 backdrop-blur-md p-2 pointer-events-none rounded-md group-hover:scale-100 duration-100 ease-in transition-all"
+								className="absolute hideon-phone hideon-ipad shadow-sm shadow-black font-semibold scale-0 border translate-y-14 z-50 backdrop-blur-md p-2 pointer-events-none rounded-md group-hover:scale-100 duration-100 ease-in transition-all"
 								style={{
 									borderColor: theme?.theme.colors.secondary,
 									color: theme?.theme.colors.text,
@@ -207,7 +207,7 @@ export const NavBar = () => {
 								className="object-cover min-h-[50px] min-w-[50px] w-[52px] h-[50px] max-w-[50px] max-h-[50px] group-hover:opacity-100 opacity-75 rounded-full"
 							/>
 							<div
-								className="absolute hideon-phone hideon-ipad font-semibold scale-0 border translate-y-14 z-50 backdrop-blur-md p-2 pointer-events-none rounded-md group-hover:scale-100 duration-100 ease-in transition-all"
+								className="absolute hideon-phone hideon-ipad shadow-sm shadow-black font-semibold scale-0 border translate-y-14 z-50 backdrop-blur-md p-2 pointer-events-none rounded-md group-hover:scale-100 duration-100 ease-in transition-all"
 								style={{
 									borderColor: theme?.theme.colors.secondary,
 									color: theme?.theme.colors.text,

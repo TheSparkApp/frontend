@@ -46,8 +46,15 @@ a {
 	.mobile-2xl {
 		@apply text-xl;
 	}
+	.max-w-phone {
+		@apply w-full rounded-sm pl-1 pr-1 ml-3 mr-3;
+		width: 100% !important;
+	}
 	.mobile-xl {
 		@apply text-lg;
+	}
+	.mobile-p-2 {
+		@apply w-full rounded-none;
 	}
 }
 @media (max-width: 440px) {
@@ -74,7 +81,7 @@ button {
 }
 select option {
 	@apply font-semibold rounded-sm;
-	height: 10px !important; 
+	height: 10px !important;
 }
 a:hover {
 	@apply ease-in transition-all duration-200 no-underline hover:underline;
@@ -98,11 +105,24 @@ br {
 		@apply w-full;
 	}
 }
+@media (min-width: 1000px) {
+	.image-prev-pc {
+		@apply max-w-screen-sm;
+	}
+}
 .hoverBackground {
-    color: var(--text-color);
-    transition: background 0.3s;
+	color: var(--text-color);
+	transition: background 0.3s;
 }
 
 .hoverBackground:hover {
-    background: var(--secondary-color);
+	background: var(--secondary-color);
+}
+.ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+a {
+	cursor: pointer;
 }

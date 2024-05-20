@@ -19,9 +19,9 @@ const OpenDiv: React.FC<OpenDiv> = ({ title, children }) => {
 				className="font-bold flex flex-row items-center select-none"
 				onClick={() => setisOpen(!isOpen)}>
 				{isOpen ? (
-					<FaAngleDown color="white" size={20} />
+					<FaAngleDown color={theme?.theme.colors.text} size={20} />
 				) : (
-					<FaAngleUp color="white" size={20} />
+					<FaAngleUp color={theme?.theme.colors.text} size={20} />
 				)}
 				<h1 className="text-xl ml-10">{title}</h1>
 			</div>
