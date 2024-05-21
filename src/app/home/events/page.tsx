@@ -27,7 +27,7 @@ export default function EventPage() {
 								color: theme?.theme.colors.text,
 								background: theme?.theme.colors.primary,
 							}}
-							className="min-w-[300px] w-full max-w-[800px] -mt-10 h-[93%] full-home rounded-md overflow-hidden">
+							className="min-w-[300px] w-full  max-w-[1100px] -mt-10 h-[93%] full-home rounded-md overflow-hidden">
 							<span>Events</span>
 						</div>
 					</div>

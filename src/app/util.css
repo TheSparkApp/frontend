@@ -56,6 +56,9 @@ a {
 	.mobile-p-2 {
 		@apply w-full rounded-none;
 	}
+	.mobile-p-2-b {
+		@apply w-full;
+	}
 }
 @media (max-width: 440px) {
 	.hide-phone2 {
@@ -68,6 +71,12 @@ a {
 @media (min-width: 601px) and (max-width: 920px) {
 	.hideon-ipad {
 		display: none;
+	}
+	.show-ipad {
+		display: block;
+	}
+	.ipad-p-2 {
+		@apply w-full;
 	}
 }
 label {

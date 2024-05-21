@@ -24,7 +24,7 @@ export const lightTheme: Theme = {
 		logo_white: true,
 		primary: "#DBDFE4",
 		accent: "#212121",
-		secondary: "#BABEC3",
+		secondary: "#ffffff",
 		background: "#f1f1f1",
 		text: "#000",
 		text_secondary: "#111",

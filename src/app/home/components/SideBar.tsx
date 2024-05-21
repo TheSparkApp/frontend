@@ -12,6 +12,7 @@ import {
 	FaUsersViewfinder,
 } from "react-icons/fa6";
 
+import "../../util.css";
 export const SideBar = () => {
 	const theme = React.useContext(ThemeContext);
 	const [isTokenSet, setIsTokenSet] = useState(false);
@@ -29,7 +30,7 @@ export const SideBar = () => {
 	const router = useRouter();
 	return (
 		<div className="min-w-[50px] hideon-phone w-[300px] max-w-[400px] h-full hide-home-bars2-w">
-			<div className="flex gap-y-2 relative flex-col w-full h-full pt-5 pb-5 pl-2 pr-2 overflow-hidden">
+			<div className="flex gap-y-2 relative flex-col w-full h-full pt-5 pb-5 pl-2 pr-2 overflow-hidden overflow-y-scroll">
 				<Page
 					title="Home"
 					icon={<FaHouse size={28} />}
@@ -142,7 +143,7 @@ const Page: React.FC<PageProps> = ({ icon, title, redirect }) => {
 					"--secondary-color": theme?.theme.colors.secondary,
 				} as React.CSSProperties
 			}
-			className="flex min-w-[54px] flex-row hoverBackground justify-start items-center h-14 cursor-pointer select-none rounded-md hover:opacity-85 group">
+			className="flex min-w-[54px] flex-row hoverBackground justify-start items-center min-h-14 cursor-pointer select-none rounded-md hover:opacity-85 group">
 			<div className="w-full max-w-16 h-full flex justify-center items-center">
 				<div className="group-hover:-translate-y-0.5 ease-in transition-all duration-75">
 					{icon}
