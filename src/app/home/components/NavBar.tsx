@@ -1,3 +1,4 @@
+"use client";
 import { LOGO, LOGO_SMALL } from "@/components/LOGO";
 import React, { useEffect, useState } from "react";
 import { ThemeContext } from "@/components/ThemeProvider";

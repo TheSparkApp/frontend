@@ -4,7 +4,7 @@ import { NavBar } from "../components/NavBar";
 import { ThemeContext } from "@/components/ThemeProvider";
 import { SideBar } from "../components/SideBar";
 
-export default function SettingsPage() {
+export default function EventPage() {
 	const theme = React.useContext(ThemeContext);
 
 	return (
@@ -28,7 +28,7 @@ export default function SettingsPage() {
 								background: theme?.theme.colors.primary,
 							}}
 							className="min-w-[300px] w-full max-w-[800px] -mt-10 h-[93%] full-home rounded-md overflow-hidden">
-							<span>Settings</span>
+							<span>Events</span>
 						</div>
 					</div>
 				</main>
