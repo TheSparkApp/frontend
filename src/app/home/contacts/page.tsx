@@ -25,10 +25,11 @@ export default function ContactPage() {
 						<div
 							style={{
 								color: theme?.theme.colors.text,
-								background: theme?.theme.colors.primary,
+								background: theme?.theme.colors.secondary,
 							}}
-							className="min-w-[300px] w-full max-w-[1100px] -mt-10 h-[93%] full-home rounded-md overflow-hidden">
+							className="min-w-[300px] w-full max-w-[800px] h-full full-home rounded-md overflow-hidden overflow-y-scroll">
 							<span>Contacts</span>
+							{/* FIXME */}
 						</div>
 					</div>
 				</main>

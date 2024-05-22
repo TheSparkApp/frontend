@@ -27,10 +27,11 @@ export default function FindFriendsPage() {
 								color: theme?.theme.colors.text,
 								background: theme?.theme.colors.primary,
 							}}
-							className="min-w-[300px] w-full max-w-[1100px] -mt-10 h-[93%] full-home rounded-md overflow-hidden">
-							<span>Find Friends</span>
+							className="min-w-[300px] w-full max-w-[800px] -mt-10 h-[93%] full-home rounded-md overflow-hidden overflow-y-scroll">
+							<span>Find friends</span>
 						</div>
 					</div>
+					<div className="min-w-[200px] w-[300px] max-w-[400px] h-full hide-home-bars"></div>
 				</main>
 			</Suspense>
 		</div>

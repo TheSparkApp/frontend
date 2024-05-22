@@ -103,6 +103,14 @@ br {
 		display: none;
 	}
 }
+@media (max-width: 1650px) {
+	.hide-home-bars-3 {
+		display: none;
+	}
+	.max-w-custom {
+		@apply max-w-[1100px];
+	}
+}
 @media (max-width: 1000px) {
 	.hide-home-bars2 {
 		display: none;

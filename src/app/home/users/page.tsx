@@ -30,6 +30,7 @@ import Image from "next/image";
 import NumberFormatter from "@/util/numberFormatter";
 import { Contact } from "../components/Contact";
 import { LOGO_SMALL } from "@/components/LOGO";
+import { Post } from "../components/Post";
 
 export default function UsersPage() {
 	const theme = React.useContext(ThemeContext);
@@ -73,7 +74,7 @@ export default function UsersPage() {
 								color: theme?.theme.colors.text,
 								background: theme?.theme.colors.primary,
 							}}
-							className="min-w-[300px] w-full max-w-[1100px] -mt-10 h-full full-home rounded-md overflow-hidden overflow-y-scroll mb-20">
+							className="min-w-[300px] w-full max-w-[800px] -mt-10 h-[93%] full-home rounded-md overflow-hidden overflow-y-scroll mb-10">
 							<div className="w-full h-full flex flex-col">
 								<div className="w-full min-h-[280px] max-h-[280px] flex flex-col items-center h-[280px]">
 									<div className="w-full min-h-[65%] h-fit bg-blue-400"></div>
@@ -513,7 +514,7 @@ export default function UsersPage() {
 														src={"/staffbadge.png"}
 														width={1024}
 														height={1024}
-														className="w-24 h-24 no-drag"
+														className="w-16 h-1w-16 no-drag"
 													/>
 													<h1 className="text-xl font-bold ml-5">
 														Staff
@@ -540,7 +541,7 @@ export default function UsersPage() {
 														}
 														width={1024}
 														height={1024}
-														className="w-24 h-24 no-drag"
+														className="w-16 h-1w-16 no-drag"
 													/>
 													<h1 className="text-xl font-bold ml-5">
 														Developer
@@ -565,7 +566,7 @@ export default function UsersPage() {
 														src={"/memberbadge.png"}
 														width={1024}
 														height={1024}
-														className="w-24 h-24 no-drag"
+														className="w-16 h-1w-16 no-drag"
 													/>
 													<h1 className="text-xl font-bold ml-5">
 														Member
@@ -581,6 +582,13 @@ export default function UsersPage() {
 									</div>
 								</div>
 								<br></br>
+							</div>
+						</div>
+						<div className="min-w-[200px] w-[300px] max-w-[600px] h-full hide-home-bars-3">
+							<div className="w-fit max-w-[500px] absolute h-full overflow-y-scroll">
+								<Post />
+								<Post />
+								<Post />
 							</div>
 						</div>
 					</div>
