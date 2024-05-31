@@ -29,7 +29,8 @@ export const Contact: React.FC<ContactProps> = ({
 			}
 			className="flex min-w-[54px] max-w-[95%] mt-1.5 flex-row hoverBackground justify-start items-center h-14 cursor-pointer select-none rounded-md hover:opacity-85 group"
 			onClick={() => {
-				if (!hasStory) router.push("/home/contacts/" + id + "/messages");
+				if (!hasStory)
+					router.push("/home/contacts/" + id + "/messages");
 			}}>
 			<div className="w-full max-w-16 h-full flex justify-center items-center">
 				<div
