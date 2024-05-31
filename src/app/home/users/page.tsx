@@ -200,7 +200,9 @@ export default function UsersPage() {
 										color={theme?.theme.colors.accent}
 										className="cursor-pointer m-2"
 									/>
-									<span className="font-semibold mr-2">Verified</span>
+									<span className="font-semibold mr-2">
+										Verified
+									</span>
 								</div>
 								<div
 									className="flex border-2 select-none transition-all ease-in duration-100 flex-row justify-center items-center p-2 cursor-pointer rounded-md"

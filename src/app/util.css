@@ -59,6 +59,9 @@ a {
 	.mobile-p-2-b {
 		@apply w-full;
 	}
+	.mobile-p-2-3 {	
+		@apply w-full max-w-full;
+	}
 }
 @media (max-width: 440px) {
 	.hide-phone2 {
@@ -66,6 +69,11 @@ a {
 	}
 	.show-phone2 {
 		display: block;
+	}
+}
+@media (max-width: 740px) {
+	.hide-phone3 {
+		display: none;
 	}
 }
 @media (min-width: 601px) and (max-width: 920px) {

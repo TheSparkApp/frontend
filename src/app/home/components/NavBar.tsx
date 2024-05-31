@@ -47,7 +47,7 @@ export const NavBar = () => {
 					/>
 				</div>
 				<div
-					onClick={() => router.push("/")}
+					onClick={() => router.push("/home")}
 					className="translate-y-0 ml-5 cursor-pointer show-phone2 hidden">
 					<LOGO_SMALL width="40px" height="40px" />
 				</div>

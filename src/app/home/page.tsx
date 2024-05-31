@@ -119,7 +119,7 @@ export default function MainApp() {
 
 	return (
 		<Mainapp>
-			<div className="w-full h-full flex flex-row relative">
+			<div className="w-full h-full flex flex-row relative justify-center">
 				<div
 					className="w-[100%] max-w-[700px] min-h-full h-full overflow-y-scroll flex flex-col items-center pb-5 transition-all ease-in duration-100"
 					ref={containerRef}>

@@ -27,7 +27,10 @@ export const Contact: React.FC<ContactProps> = ({
 					"--secondary-color": theme?.theme.colors.secondary,
 				} as React.CSSProperties
 			}
-			className="flex min-w-[54px] mt-1.5 flex-row hoverBackground justify-start items-center h-14 cursor-pointer select-none rounded-md hover:opacity-85 group">
+			className="flex min-w-[54px] max-w-[95%] mt-1.5 flex-row hoverBackground justify-start items-center h-14 cursor-pointer select-none rounded-md hover:opacity-85 group"
+			onClick={() => {
+				if (!hasStory) router.push("/home/contacts/" + id + "/messages");
+			}}>
 			<div className="w-full max-w-16 h-full flex justify-center items-center">
 				<div
 					style={{ borderColor: theme?.theme.colors.accent }}
@@ -39,6 +42,8 @@ export const Contact: React.FC<ContactProps> = ({
 					onClick={() => {
 						if (hasStory) {
 							router.push("/home/users/" + id + "/story");
+						} else {
+							router.push("/home/contacts/" + id + "/messages");
 						}
 					}}>
 					<Image
@@ -50,7 +55,11 @@ export const Contact: React.FC<ContactProps> = ({
 					/>
 				</div>
 			</div>
-			<div className="flex flex-col overflow-hidden">
+			<div
+				className="flex flex-col overflow-hidden"
+				onClick={() => {
+					router.push("/home/contacts/" + id + "/messages");
+				}}>
 				<span className="text-xl font-semibold w-full text-start max-w-[200px] ellipsis">
 					{name}
 				</span>
@@ -61,4 +70,3 @@ export const Contact: React.FC<ContactProps> = ({
 		</div>
 	);
 };
-
