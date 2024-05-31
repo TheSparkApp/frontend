@@ -30,13 +30,13 @@ export const NavBar = () => {
 	const router = useRouter();
 
 	return (
-		<div className="flex flex-col">
+		<div className="flex flex-col items-center">
 			<div
 				style={{
 					borderColor: theme?.theme.colors.accent,
 					background: theme?.theme.colors.background,
 				}}
-				className="w-full max-w-[1920px] backdrop-blur-lg h-14 max-h-14 min-h-14 p-1 flex flex-row fixed z-50 justify-start items-center  border-gray-900 border-spacing-1.5">
+				className="w-full max-w-[1920px] backdrop-blur-lg h-14 max-h-14 min-h-14 p-1 flex flex-row fixed z-50 justify-start items-center border-gray-900 border-spacing-1.5">
 				<div
 					onClick={() => router.push("/home")}
 					className="translate-y-1 ml-2 cursor-pointer hide-phone2">
@@ -102,7 +102,10 @@ export const NavBar = () => {
 							/>
 							{newNotificationAmount > 0 ? (
 								<div
-									style={{ color: theme?.theme.colors.text_negative }}
+									style={{
+										color: theme?.theme.colors
+											.text_negative,
+									}}
 									className="absolute max-w-8 bg-red-500 w-fit h-5 flex justify-center items-center pl-1 pr-1 rounded-md translate-x-3 -translate-y-3">
 									<span className="font-semibold">
 										{newNotificationAmount > 9
@@ -116,7 +119,7 @@ export const NavBar = () => {
 								style={{
 									borderColor: theme?.theme.colors.secondary,
 									color: theme?.theme.colors.text,
-									background: theme?.theme.colors.primary
+									background: theme?.theme.colors.primary,
 								}}>
 								<span>Notifactions</span>
 							</div>
@@ -137,7 +140,7 @@ export const NavBar = () => {
 								style={{
 									borderColor: theme?.theme.colors.secondary,
 									color: theme?.theme.colors.text,
-									background: theme?.theme.colors.primary
+									background: theme?.theme.colors.primary,
 								}}>
 								<span>Post</span>
 							</div>
@@ -158,7 +161,7 @@ export const NavBar = () => {
 								style={{
 									borderColor: theme?.theme.colors.secondary,
 									color: theme?.theme.colors.text,
-									background: theme?.theme.colors.primary
+									background: theme?.theme.colors.primary,
 								}}>
 								<span>Groups</span>
 							</div>
@@ -176,7 +179,10 @@ export const NavBar = () => {
 							/>
 							{newMessageAmount > 0 ? (
 								<div
-									style={{ color: theme?.theme.colors.text_negative }}
+									style={{
+										color: theme?.theme.colors
+											.text_negative,
+									}}
 									className="absolute max-w-8 bg-red-500 w-fit h-5 flex justify-center items-center pl-1 pr-1 rounded-md translate-x-3 -translate-y-3">
 									<span className="font-semibold">
 										{newMessageAmount > 9
@@ -190,7 +196,7 @@ export const NavBar = () => {
 								style={{
 									borderColor: theme?.theme.colors.secondary,
 									color: theme?.theme.colors.text,
-									background: theme?.theme.colors.primary
+									background: theme?.theme.colors.primary,
 								}}>
 								<span>Messages</span>
 							</div>
@@ -212,7 +218,7 @@ export const NavBar = () => {
 								style={{
 									borderColor: theme?.theme.colors.secondary,
 									color: theme?.theme.colors.text,
-									background: theme?.theme.colors.primary
+									background: theme?.theme.colors.primary,
 								}}>
 								<span>Profile</span>
 							</div>
@@ -221,11 +227,15 @@ export const NavBar = () => {
 				</div>
 			</div>
 			{openSearch ? (
-				<div className="relative top-[55px] show-phone hidden">
+				<div
+					className="relative top-[55px] show-phone hidden pb-3"
+					style={{
+						background: theme?.theme.colors.background,
+					}}>
 					<div className="flex flex-col justify-center items-center w-full">
 						<form className="w-10/12 mt-2 max-w-[800px] h-[43px] flex items-center">
 							<div
-								className="flex flex-row h-[43px] w-full items-center border rounded-md mr-1"
+								className="flex flex-row h-[45px] w-full items-center border rounded-md mr-1"
 								style={{
 									borderColor: theme?.theme.colors.secondary,
 									color: theme?.theme.colors.text,

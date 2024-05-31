@@ -122,6 +122,11 @@ br {
 		@apply w-full;
 	}
 }
+@media (max-width: 1200px) {
+	.hide-home-bars3 {
+		display: none;
+	}
+}
 @media (min-width: 1000px) {
 	.image-prev-pc {
 		@apply max-w-screen-sm;

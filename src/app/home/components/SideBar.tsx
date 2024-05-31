@@ -29,7 +29,11 @@ export const SideBar = () => {
 
 	const router = useRouter();
 	return (
-		<div className="min-w-[50px] hideon-phone w-[300px] max-w-[400px] h-full hide-home-bars2-w">
+		<div
+			className="min-w-[50px] hideon-phone w-[300px] max-w-[400px] h-full hide-home-bars2-w"
+			style={{
+				background: theme?.theme.colors.background,
+			}}>
 			<div className="flex gap-y-2 relative flex-col w-full h-full pt-5 pb-5 pl-2 pr-2 overflow-hidden overflow-y-scroll">
 				<Page
 					title="Home"
@@ -78,7 +82,7 @@ export const SideBar = () => {
 					style={{
 						color: theme?.theme.colors.text,
 					}}
-					className="min-h-10 pl-1 pr-1 opacity-75 text-center text-[10px] gap-x-2 gap-y-1 flex flex-row flex-wrap absolute bottom-14 left-0 w-full hide-home-bars2">
+					className="min-h-14 max-h-14 absolute bottom-14 overflow-hidden mt-10 pl-1 pr-1 opacity-75 text-center text-[10px] gap-x-2 gap-y-1 flex flex-row flex-wrap justify-center left-0 w-full hide-home-bars2">
 					<a
 						className="cursor-pointer"
 						href="/privacy-policy"
@@ -149,7 +153,7 @@ const Page: React.FC<PageProps> = ({ icon, title, redirect }) => {
 					{icon}
 				</div>
 			</div>
-			<span className="text-xl font-semibold w-full text-start p-5 hide-home-bars2">
+			<span className="text-xl font-semibold w-full text-start p-4 hide-home-bars2">
 				{title}
 			</span>
 		</div>

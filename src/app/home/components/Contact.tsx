@@ -45,11 +45,12 @@ export const Contact: React.FC<ContactProps> = ({
 						width={45}
 						height={45}
 						alt="Profile picture"
+						className="min-w-[45px] min-h-[45px]"
 						src={icon}
 					/>
 				</div>
 			</div>
-			<div className="flex flex-col ">
+			<div className="flex flex-col overflow-hidden">
 				<span className="text-xl font-semibold w-full text-start max-w-[200px] ellipsis">
 					{name}
 				</span>
