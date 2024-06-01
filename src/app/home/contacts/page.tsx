@@ -291,55 +291,114 @@ export const MessageTab: React.FC<MessagetabProps> = ({
 	const theme = React.useContext(ThemeContext);
 	const router = useRouter();
 	return (
-		<div
-			className="w-full min-h-16  max-h-16 border-b flex flex-row items-center pl-3 pr-3"
-			style={{
-				background: theme?.theme.colors.primary,
-				borderColor: theme?.theme.colors.secondary,
-			}}>
-			<div className="w-full h-full flex flex-row flex-nowrap mt-3 select-none">
-				<div className="hidden show-phone mr-3 mt-0.5">
-					<div className="flex justify-center items-center">
-						<div
-							className="flex justify-center select-none cursor-pointer rounded-md items-center p-4 group"
-							style={{
-								background: theme?.theme.colors.secondary,
-								borderColor: theme?.theme.colors.primary,
-							}}
-							onClick={() => {
-								router.push("/home/contacts");
-							}}>
-							<FaArrowLeft className="group-hover:opacity-75" />
+		<div className="flex flex-col w-full h-full">
+			<div
+				className="w-full min-h-16 max-h-16 border-b flex flex-row items-center pl-3 pr-3"
+				style={{
+					background: theme?.theme.colors.primary,
+					borderColor: theme?.theme.colors.secondary,
+				}}>
+				<div className="w-full h-full flex flex-row flex-nowrap mt-3 select-none">
+					<div className="hidden show-phone mr-3 mt-0.5">
+						<div className="flex justify-center items-center">
+							<div
+								className="flex justify-center select-none cursor-pointer rounded-md items-center p-4 group"
+								style={{
+									background: theme?.theme.colors.secondary,
+									borderColor: theme?.theme.colors.primary,
+								}}
+								onClick={() => {
+									router.push("/home/contacts");
+								}}>
+								<FaArrowLeft className="group-hover:opacity-75" />
+							</div>
+						</div>
+					</div>
+					<Image
+						src={"/stein_pfp.png"}
+						width={50}
+						height={50}
+						alt="Profile picture"
+						className="object-cover no-drag min-h-[50px] min-w-[50px] w-[52px] h-[50px] max-w-[50px] max-h-[50px] rounded-full"
+					/>
+					<div className="flex flex-col ml-2">
+						<span className="text-2xl mobile-2xl cursor-pointer hover:underline">
+							{name}
+						</span>
+						<div className="flex flex-row justify-center items-center">
+							<span className="text-sm opacity-50">{status}</span>
+							<span className="ml-2 mr-2 opacity-50 font-bold">
+								·
+							</span>
+							<span className="text-sm opacity-50 ellipsis">
+								Last seen: {lastSeen}
+							</span>
 						</div>
 					</div>
 				</div>
-				<Image
-					src={"/stein_pfp.png"}
-					width={50}
-					height={50}
-					alt="Profile picture"
-					className="object-cover no-drag min-h-[50px] min-w-[50px] w-[52px] h-[50px] max-w-[50px] max-h-[50px] rounded-full"
-				/>
-				<div className="flex flex-col ml-2">
-					<span className="text-2xl mobile-2xl cursor-pointer hover:underline">
-						{name}
-					</span>
-					<div className="flex flex-row justify-center items-center">
-						<span className="text-sm opacity-50">{status}</span>
-						<span className="ml-2 mr-2 opacity-50 font-bold">
-							·
-						</span>
-						<span className="text-sm opacity-50">
-							Last seen: {lastSeen}
-						</span>
+				<div className="transition-all ease-in duration-100 group min-w-10 h-full rounded-md active:opacity-100 opacity-75">
+					<div className="w-full flex flex-row justify-center items-center cursor-pointer select-none rounded-md h-full">
+						<FaEllipsisVertical size={20} />
 					</div>
 				</div>
 			</div>
-			<div className="transition-all ease-in duration-100 group min-w-10 rounded-md active:opacity-100 opacity-75">
-				<div className="w-full flex flex-row justify-center items-center cursor-pointer select-none rounded-md h-full">
-					<FaEllipsisVertical size={20} />
+			<div className="w-full h-full relative flex flex-col rounded-md overflow-hidden">
+				<div className="w-full h-full overflow-scroll p-2">
+					<div className="w-full h-full flex flex-col relative select-none">
+						<MessageObj message="Hello world" sender={true} />
+						<MessageObj message="Hello world" sender={false} />
+						<MessageObj message="Hello world" sender={true} />
+						<MessageObj message="Hello world" sender={true} />
+
+					</div>
 				</div>
+				<form
+					className="w-full relative min-h-16 h-16 pt-2 pb-2 mb-[60px] bg-black flex justify-start items-center"
+					style={{
+						background: theme?.theme.colors.background,
+					}}>
+					<input
+						className="w-full mr-1 rounded-md outline-none border h-full ml-1 text-lg p-2"
+						style={{
+							background: theme?.theme.colors.primary,
+							borderColor: theme?.theme.colors.secondary,
+						}}
+					/>
+					<div
+						className="rounded-md outline-none border min-w-12 min-h-12 ml-1 mr-1 cursor-pointer ease-in transition-all hover:-translate-y-0.5 active:translate-y-0 active:opacity-75"
+						style={{
+							background: theme?.theme.colors.primary,
+							borderColor: theme?.theme.colors.secondary,
+						}}></div>
+					<div
+						className="rounded-md outline-none border min-w-12 min-h-12 ml-1 mr-1 cursor-pointer ease-in transition-all hover:-translate-y-0.5 active:translate-y-0 active:opacity-75"
+						style={{
+							background: theme?.theme.colors.primary,
+							borderColor: theme?.theme.colors.secondary,
+						}}></div>
+				</form>
 			</div>
+		</div>
+	);
+};
+interface MessageProps {
+	message: string;
+	sender: boolean;
+}
+const MessageObj: React.FC<MessageProps> = ({ sender, message }) => {
+	const theme = React.useContext(ThemeContext);
+	const router = useRouter();
+	return sender ? (
+		<div className="w-full text-left mt-5">
+			<span className="p-2 bg-red-600 rounded-md rounded-bl-none">
+				{message}
+			</span>
+		</div>
+	) : (
+		<div className="w-full text-right mt-5">
+			<span className="p-2 bg-blue-600 rounded-md rounded-br-sm">
+				{message}
+			</span>
 		</div>
 	);
 };

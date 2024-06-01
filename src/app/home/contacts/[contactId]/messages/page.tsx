@@ -18,7 +18,7 @@ export default function ContactMessages({ params }: Params) {
 	return (
 		<Contacts params={{ contactId: contactId }}>
 			<div
-				className=" w-full h-full absolute z-50 flex flex-col"
+				className="w-[60%] h-full absolute z-50 flex flex-col"
 				style={{
 					background: theme?.theme.colors.background,
 				}}>
